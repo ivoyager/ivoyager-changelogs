@@ -4,5 +4,5 @@
 * Signature changes in SaverLoader.save_game() & load_game(); this is to make SaverLoader stand-alone so it can be added to Godot Asset Library.
 * Moved make_object_or_scene() from FileHelper to SaverLoader; same reason as above.
 
-### Bugs
+### Bug fixes
 * fixed Credits button in exports (released in hotfix a)
