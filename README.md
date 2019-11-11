@@ -5,4 +5,4 @@
 * Moved make_object_or_scene() from FileHelper to SaverLoader; same reason as above.
 
 ### Bugs
-* fixed Credits button in exports (hotfix a)
+* fixed Credits button in exports (released in hotfix a)
