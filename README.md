@@ -4,7 +4,7 @@
 * Yaw, Pitch, Roll - via hotkeys and right-button mouse drag (drag near screen center for yaw/pitch, or near edge for roll)
 
 ### Changes
-* Reduced window size to fit inside HD screen: now 1800 x 900. (This is in Project Settings so it will only effect new Project Templates and the stand-alone Planetarium.) It's still resizable.
+* Reduced window size to fit inside HD screen: now 1800 x 900. (This is in Project Settings so it will only effect new Project Templates and the stand-alone Planetarium.) It's still resizable on the fly.
 * "Quit/Exit without saving?" confirmations disabled if save/load disabled.
 
 ### Interface-breaking changes
@@ -13,6 +13,6 @@
 * Some VoyagerCamera API changes to allow for yaw/pitch/roll rotations.
 
 ### Bug fixes
-* Fixed Credits button in exports (released in hotfix a)
+* Fixed Credits button in exports [0.0.1-hotfix-a]
 * Fixed InfoPanel movement when minimizing
-* Removed non-existent hotkeys
+* Removed hotkeys for non-existent developer functions
