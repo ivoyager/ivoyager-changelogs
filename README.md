@@ -11,7 +11,7 @@
 * Widget RangeLabel sets its own visibility
 
 ### API-breaking changes
-* VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" -> "VIEWPOINT_BUMPED"
+* Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" -> "VIEWPOINT_BUMPED"
 * Renamed widget "CameraRange" -> "RangeLabel"
 
 ### Bug fixes
