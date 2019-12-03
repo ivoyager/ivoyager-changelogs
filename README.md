@@ -10,7 +10,7 @@
 
 ### Changes
 * Widget RangeLabel sets its own visibility
-* Renamed COPYRIGHT.txt to 3RD_PARTY.txt in all repositories. The file name "COPYRIGHT" interferes with GitHub's autoscript recognition of our Apache 2.0 license in LICENSE.txt.
+* Renamed COPYRIGHT.txt to 3RD_PARTY.txt in all repositories. The file name "COPYRIGHT" interferes with GitHub's autoscript recognition of our Apache 2.0 license in LICENSE.txt. And "3RD_PARTY" is a more accurate description of the contents.
 
 ### API-breaking changes
 * Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" -> "VIEWPOINT_BUMPED"
