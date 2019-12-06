@@ -10,14 +10,14 @@
 
 ### Changes
 * Widget RangeLabel sets its own visibility.
-* Renamed COPYRIGHT.txt to 3RD_PARTY.txt in all repositories. The file name "COPYRIGHT" interferes with GitHub's autoscript recognition of our Apache 2.0 license (in LICENSE.txt). And "3RD_PARTY" is a more accurate description of the contents.
+* Renamed "COPYRIGHT.txt" to "3RD_PARTY.txt" in all repositories. "COPYRIGHT" was interfering with GitHub recognition our Apache 2.0 license in LICENSE.txt. Also, "3RD_PARTY" is a better description of the contents.
 * Many Controls such as MainMenu, MainProgBar and others are now safely removable.
 * Widget fixes so they can be added before solar system build.
-* Renamed HUD2dControl to HUD2dSurface and moved from wrong directory to gui_admin.
+* Renamed "HUD2dControl" to "HUD2dSurface" and moved from wrong directory to gui_admin.
 
 ### API-breaking changes
-* Renamed VoyagerCamera enum VIEWPOINT_BUMPED_POINTING to VIEWPOINT_BUMPED
-* Renamed widget CameraRange to RangeLabel
+* Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
+* Renamed widget "CameraRange" to "RangeLabel".
 
 ### Bug fixes
 * Fixed var shadowing error
