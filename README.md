@@ -21,6 +21,6 @@
 * Renamed widget "CameraRange" to "RangeLabel".
 
 ### Bug fixes
-* Fixed var shadowing error
-* Fixed asteroid visibility save/load persistence
-* Fixed error in AsteroidGroup.max_apoapsis calculation ()
+* Fixed var shadowing error.
+* Fixed asteroid visibility save/load persistence.
+* Fixed error in AsteroidGroup.max_apoapsis calculation.
