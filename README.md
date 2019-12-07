@@ -19,6 +19,7 @@
 ### API-breaking changes
 * Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
 * Renamed widget "CameraRange" to "RangeLabel".
+* Moved some public vars from Main to Global (ivoyager_version, project_version, is_modded).
 
 ### Bug fixes
 * Fixed var shadowing error.
