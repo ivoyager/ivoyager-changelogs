@@ -7,7 +7,7 @@
    * ViewpointBox - SelectionPanel widget with Zoom/45/Top buttons.
    * FocalLengthBox - SelectionPanel widget with focal-length label & buttons.
    * CameraLock - NavigationPanel widget that locks/unlocks camera to main UI selection.
-* Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv. Set to 100.0 to see all 647,000 asteroids (if you have a good graphics card!), or less than 15.0 to lower the number of imported asteroids (we have 64,738 with default mag_cutoff=15 setting).
+* Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv. With the default mag_cutoff=15 for all groups in asteroid_group_data.csv, we have 64,738 total asteroids. If you set Global.asteroid_mag_cutoff_override = 100.0, you'll see all 647,000 asteroids. If you set the override to a value < 15.0, you'll have fewer asteroids.
 
 ### Changes
 * Widget RangeLabel sets its own visibility.
