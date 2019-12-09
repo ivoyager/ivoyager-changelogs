@@ -15,6 +15,7 @@
 * Many Controls such as MainMenu, MainProgBar and others are now safely removable.
 * Widget fixes so they can be added before solar system build.
 * Renamed "HUD2dControl" to "HUD2dSurface" and moved from wrong directory to gui_admin.
+* Widget DateTime displays date/time text in red when time runs in reverse.
 
 ### API-breaking changes
 * Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
