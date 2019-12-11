@@ -8,6 +8,7 @@
    * FocalLengthBox - SelectionPanel widget with focal-length label & buttons.
    * CameraLock - NavigationPanel widget that locks/unlocks camera to main UI selection.
 * Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv. With the default mag_cutoff=15, we have 64,738 total asteroids. If you set the override to 100.0, you'll see all 647,000 asteroids. If you set the override to a value < 15.0, you'll have fewer than 64,738 asteroids. (Magnitude is smaller for larger objects!)
+* Added new "planetarium-style" GUI. This will become default in ivoyager_planetarium project (but isn't yet). Both "game-style" and "planetarium-style" are in the core submodule, so can be used by any project (the original "game-style" is default).
 
 ### Changes
 * Widget RangeLabel sets its own visibility.
@@ -21,6 +22,7 @@
 * Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
 * Renamed widget "CameraRange" to "RangeLabel".
 * Moved some public vars from Main to Global (ivoyager_version, project_version, is_modded).
+* There was a directory name change from "gui_in_game" to "gui_game". This isn't technically API-breaking, but it may mess you up if you have hard-coded paths to the old directory and update ivoyager submodule.
 
 ### Bug fixes
 * Fixed var shadowing error.
