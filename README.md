@@ -26,7 +26,7 @@
 * Renamed widget "CameraRange" to "RangeLabel".
 * Moved some public vars from Main to Global (ivoyager_version, project_version, is_modded).
 * There was a directory name change from "gui_in_game" to "gui_game". This isn't technically API-breaking, but it may mess you up if you have hard-coded paths to the old directory and update ivoyager submodule.
-* Global members that specified directory paths that included "/ivoyager_assets/" were moved into the asset_paths dictionary.
+* Project vars in Global that specified directory paths with "/ivoyager_assets/" were moved into the Global.asset_paths dictionary.
 
 ### Bug fixes
 * Fixed var shadowing error.
