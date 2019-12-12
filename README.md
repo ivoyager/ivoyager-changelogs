@@ -1,4 +1,4 @@
-# master (after v0.0.2)
+# v0.0.3 development (master branch)
 (Now using Godot **3.1.2.**)
 
 ### Added
