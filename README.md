@@ -19,7 +19,8 @@
 * Widget DateTime displays date/time text in red when time runs in reverse.
 * Removed InfoPanel and the wiki subpanel. This was for a couple reasons: 1) InfoPanel was confusingly coded, 2) the Planetarium now links directly to Wikipedia, so no need to maintain large text files. (Post [in the forum](https://ivoyager.dev/forum/) if you want previous code for your project.)
 * Changes in asteroid shaders to allow WebGL1 export.
-* Stars brightened up a good bit.
+* Stars brightened up (in new 0.0.3 ivoyager_assets).
+* Minor color adjustments & special adjustments for planetarium web deployment (GLES2 is darker than GLES3).
 
 ### API-breaking changes
 * Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
