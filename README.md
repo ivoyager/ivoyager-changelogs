@@ -4,6 +4,8 @@
 ### Added
 * Many new GUI widgets. The idea here is to make existing "functional elements" (e.g., a set of related buttons) into self-contained scene widgets for easy use in project-specific GUI. This will be done on an as-needed basis.
 * Added new "planetarium-style" GUI. This is now default in the Planetarium project. Both "game-style" and "planetarium-style" are in the core submodule, so can be used by any project. PlanetariumGUI is cleaner and less "gamey".
+* Added missing selection functions. You can navigate almost entirely now with Shift-arrows, P, Shift-P, M, Shift-M, etc. (see Hotkeys/Selection)
+* Use class const GLOBAL_ENUM or GLOBAL_ENUM_2 to add listed enums to Global.enums.
 * Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv. With the default mag_cutoff=15, we have 64,738 total asteroids. If you set the override to 100.0, you'll see all 647,000 asteroids. If you set the override to a value < 15.0, you'll have fewer than 64,738 asteroids. (Magnitude is smaller for larger objects!)
 
 ### Changes
@@ -25,6 +27,8 @@
 * There was a directory name change from "gui_in_game" to "gui_game". This isn't technically API-breaking, but it may mess you up if you have hard-coded paths to the old directory and update ivoyager submodule.
 * Project vars in Global that specified directory paths with "/ivoyager_assets/" were moved into the Global.asset_paths dictionary.
 * Removed class_name and SCENE constant for almost all GUI widgets. These should mostly be built using the scene editor. A few are still callable by class_name including OneUseConfirm.
+* Removed EnumGlobalizer (functionality moved to Global.project_init()).
+* Renamed SelectionItem "SelectionType" to "SelectionTypes".
 
 ### Bug fixes
 * Fixed var shadowing error.
