@@ -35,3 +35,6 @@
 * Fixed var shadowing error.
 * Fixed asteroid visibility save/load persistence.
 * Fixed error in AsteroidGroup.max_apoapsis calculation.
+
+### Planetarium web-deployment note
+Repository ivoyager_planetarium has a new branch "web-deployment". This branch is periodically rebased onto master. It has one commit that changes some project.godot settings, for example, to use GLES2 rendering. At 0.0.3 release there will be a separate assets directory "ivoyager_assets_web" that is intended for use in web deployment.
