@@ -6,7 +6,7 @@
 * Added new "planetarium-style" GUI. This is now default in the Planetarium project. Both "game-style" and "planetarium-style" are in the core submodule, so can be used by any project. PlanetariumGUI is cleaner and less "gamey".
 * Added missing selection functions. You can navigate almost entirely now with Shift-arrows, P, Shift-P, M, Shift-M, etc. (see Hotkeys/Selection)
 * Use class const GLOBAL_ENUM or GLOBAL_ENUM_2 to add listed enums to Global.enums.
-* Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv. With the default mag_cutoff=15, we have 64,738 total asteroids. If you set the override to 100.0, you'll see all 647,000 asteroids. If you set the override to a value < 15.0, you'll have fewer than 64,738 asteroids. (Magnitude is smaller for larger objects!)
+* Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv (the table uses mag_cutoff=15 for most groups but a less restrictive setting for Near-Earth and Mars-Crossers). With asteroid_mag_cutoff_override = 15.0, you will have 64,738 total asteroids. With 100.0, you'll have all 647,000 asteroids! ("Larger" magnitude is smaller object so less restrictive!)
 
 ### Changes
 * Widget RangeLabel sets its own visibility.
@@ -19,6 +19,7 @@
 * Changes in asteroid shaders to allow WebGL1 export.
 * Stars brightened up (in new 0.0.3 ivoyager_assets).
 * Minor color adjustments & special adjustments for planetarium web deployment (GLES2 is darker than GLES3).
+* Planetarium skips the splash screen.
 
 ### API-breaking changes
 * Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
