@@ -1,39 +1,14 @@
-# v0.0.3
-(Now using Godot **3.1.2.**)
+# v0.0.4 development (master branch)
+(Godot version **3.1.2.**)
 
 ### Added
-* Many new GUI widgets. The idea here is to make existing "functional elements" (e.g., a set of related buttons) into self-contained scene widgets for easy use in project-specific GUI. This will be done on an as-needed basis.
-* Added new "planetarium-style" GUI. This is now default in the Planetarium project. Both "game-style" and "planetarium-style" are in the core submodule, so can be used by any project. PlanetariumGUI is cleaner and less "gamey".
-* Added missing selection functions. You can navigate almost entirely now with Shift-arrows, P, Shift-P, M, Shift-M, etc. (see Hotkeys/Selection)
-* Use class const GLOBAL_ENUM or GLOBAL_ENUM_2 to add listed enums to Global.enums.
-* Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv (the table uses mag_cutoff=15 for most groups but a less restrictive setting for Near-Earth and Mars-Crossers). With asteroid_mag_cutoff_override = 15.0, you will have 64,738 total asteroids. With 100.0, you'll have all 647,000 asteroids! ("Larger" magnitude is smaller object so less restrictive!)
+* 
 
 ### Changes
-* Most old GUI widgets work a little differently.
-* Renamed "COPYRIGHT.txt" to "3RD_PARTY.txt" in all repositories. "COPYRIGHT" was interfering with GitHub recognition our Apache 2.0 license in LICENSE.txt. Also, "3RD_PARTY" is a better description of the contents.
-* Many Controls such as MainMenu, MainProgBar and others are now safely removable.
-* Renamed "HUD2dControl" to "HUD2dSurface" and moved from wrong directory to gui_admin.
-* Widget DateTime displays date/time text in red when time runs in reverse.
-* Removed InfoPanel and the wiki subpanel. This was for a couple reasons: 1) InfoPanel was confusingly coded, 2) the Planetarium now links directly to Wikipedia, so no need to maintain large text files. (Post [in the forum](https://ivoyager.dev/forum/) if you want previous code for your project.)
-* Changes in asteroid shaders to allow WebGL1 export.
-* Stars brightened up (in new 0.0.3 ivoyager_assets).
-* Minor color adjustments & special adjustments for planetarium web deployment (GLES2 is darker than GLES3).
-* Planetarium skips the splash screen.
+* Added default hotkeys to overcome web browser disabling of +/- keys (0.0.3 hotfix a for Web Planetarium only).
 
 ### API-breaking changes
-* Changes to VoyagerCamera "VIEWPOINT_" enums.
-* Renamed several GUI widgets.
-* Moved some public vars from Main to Global (ivoyager_version, project_version, is_modded).
-* There was a directory name change from "gui_in_game" to "gui_game". This isn't technically API-breaking, but it may mess you up if you have hard-coded paths to the old directory and update ivoyager submodule.
-* Project vars in Global that specified directory paths with "/ivoyager_assets/" were moved into the Global.asset_paths dictionary.
-* Removed class_name and SCENE constant for almost all GUI widgets. These should mostly be built using the scene editor. A few are still callable by class_name including OneUseConfirm.
-* Removed EnumGlobalizer (functionality moved to Global.project_init()).
-* Renamed SelectionItem "SelectionType" to "SelectionTypes".
+* 
 
 ### Bug fixes
-* Fixed var shadowing error.
-* Fixed asteroid visibility save/load persistence.
-* Fixed error in AsteroidGroup.max_apoapsis calculation.
-
-### Planetarium web-deployment note
-Repository ivoyager_planetarium has a new branch "web-deployment". This branch is periodically rebased onto master. It has one commit that changes some project.godot settings, for example, to use GLES2 rendering. There is a different (reduced) assets directory "ivoyager_assets_web" that is intended for use in web deployment.
+* 
