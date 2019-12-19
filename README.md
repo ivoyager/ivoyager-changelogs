@@ -1,4 +1,4 @@
-# v0.0.3 development (master branch)
+# v0.0.3
 (Now using Godot **3.1.2.**)
 
 ### Added
@@ -9,10 +9,9 @@
 * Added project setting Global.asteroid_mag_cutoff_override. This can overide mag_cutoff for all groups normally set in data/solar_system/asteroid_group_data.csv (the table uses mag_cutoff=15 for most groups but a less restrictive setting for Near-Earth and Mars-Crossers). With asteroid_mag_cutoff_override = 15.0, you will have 64,738 total asteroids. With 100.0, you'll have all 647,000 asteroids! ("Larger" magnitude is smaller object so less restrictive!)
 
 ### Changes
-* Widget RangeLabel sets its own visibility.
+* Most old GUI widgets work a little differently.
 * Renamed "COPYRIGHT.txt" to "3RD_PARTY.txt" in all repositories. "COPYRIGHT" was interfering with GitHub recognition our Apache 2.0 license in LICENSE.txt. Also, "3RD_PARTY" is a better description of the contents.
 * Many Controls such as MainMenu, MainProgBar and others are now safely removable.
-* Widget fixes so they can be added before solar system build.
 * Renamed "HUD2dControl" to "HUD2dSurface" and moved from wrong directory to gui_admin.
 * Widget DateTime displays date/time text in red when time runs in reverse.
 * Removed InfoPanel and the wiki subpanel. This was for a couple reasons: 1) InfoPanel was confusingly coded, 2) the Planetarium now links directly to Wikipedia, so no need to maintain large text files. (Post [in the forum](https://ivoyager.dev/forum/) if you want previous code for your project.)
@@ -22,8 +21,8 @@
 * Planetarium skips the splash screen.
 
 ### API-breaking changes
-* Renamed VoyagerCamera enum "VIEWPOINT_BUMPED_POINTING" to "VIEWPOINT_BUMPED".
-* Renamed widget "CameraRange" to "RangeLabel".
+* Changes to VoyagerCamera "VIEWPOINT_" enums.
+* Renamed several GUI widgets.
 * Moved some public vars from Main to Global (ivoyager_version, project_version, is_modded).
 * There was a directory name change from "gui_in_game" to "gui_game". This isn't technically API-breaking, but it may mess you up if you have hard-coded paths to the old directory and update ivoyager submodule.
 * Project vars in Global that specified directory paths with "/ivoyager_assets/" were moved into the Global.asset_paths dictionary.
@@ -37,4 +36,4 @@
 * Fixed error in AsteroidGroup.max_apoapsis calculation.
 
 ### Planetarium web-deployment note
-Repository ivoyager_planetarium has a new branch "web-deployment". This branch is periodically rebased onto master. It has one commit that changes some project.godot settings, for example, to use GLES2 rendering. At 0.0.3 release there will be a separate assets directory "ivoyager_assets_web" that is intended for use in web deployment.
+Repository ivoyager_planetarium has a new branch "web-deployment". This branch is periodically rebased onto master. It has one commit that changes some project.godot settings, for example, to use GLES2 rendering. There is a different (reduced) assets directory "ivoyager_assets_web" that is intended for use in web deployment.
