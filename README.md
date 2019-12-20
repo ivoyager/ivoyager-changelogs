@@ -5,7 +5,7 @@
 * 
 
 ### Changes
-* Added default hotkeys to overcome web browser disabling of +/- keys (0.0.3 hotfix a for Web Planetarium only).
+* Added default hotkeys to overcome web browser disabling of +/- keys (0.0.3 **hotfix a** for Web Planetarium only).
 
 ### API-breaking changes
 * 
