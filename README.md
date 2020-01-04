@@ -1,14 +1,10 @@
-# v0.0.4
+# v0.0.5 dev (master branch)
 (Godot version **3.1.2.**)
 
 ### Added
-* Added Full Screen button to Planetarium GUI.
-* Added many user options for camera movement rates (mouse & key).
-
+* 
 ### Changes
-* Added default hotkeys to overcome web browser disabling of +/- keys (0.0.3 **hotfix a** for Web Planetarium only).
-* Slowed down default camera wheel effect.
-* Localization text keys added for OptionsPopup & HotkeysPopup.
+* Improved Planetarium GUI visibility control. GUI won't disapear when mouse in GUI edge-margin or off screen.
 
 ### API-breaking changes
-* Changes to VoyagerCamera public vars
+* 
