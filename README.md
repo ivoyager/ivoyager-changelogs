@@ -4,7 +4,7 @@
 ### Added
 * 
 ### Changes
-* Improved Planetarium GUI visibility control. GUI won't disapear when mouse in GUI edge-margin or off screen.
+* Improved Planetarium GUI visibility control. GUI won't disapear when mouse in margin between GUI and screen edge.
 
 ### API-breaking changes
 * 
