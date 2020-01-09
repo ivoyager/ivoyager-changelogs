@@ -1,4 +1,4 @@
-# v0.0.5 dev, master branch [or godot-3.2 branch if indicated]
+# master branch [or godot-3.2 branch if indicated]
 (Currently Godot version **3.1.2** but anticipating 3.2)
 
 ### Added
