@@ -3,7 +3,7 @@
 
 ### Changes
 * Improved Planetarium GUI visibility control. GUI won't disapear when mouse in margin between GUI and screen edge.
-* Planetarium uses common MainMenu rather than its own menu.
+* Planetarium uses common MainMenu rather than its own menu. This allows add-ons or other external code to use MainMenu API to add buttons for Planetarium.
 * Copyright notices updated for 2020.
 
 # _godot-3.2_ branch
