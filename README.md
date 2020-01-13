@@ -6,7 +6,7 @@
 * Planetarium uses common MainMenu rather than its own menu. This allows add-ons or other external code to use MainMenu API to add buttons for Planetarium.
 * Copyright notices updated for 2020.
 
-# _godot-3.2_ branch
+# _godot-3.2_ branch (submodule only)
 (Tested w/ Godot 3.2-beta5)
 
 ### Bug fixes
