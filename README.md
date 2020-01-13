@@ -6,8 +6,11 @@
 * Planetarium uses common MainMenu rather than its own menu. This allows add-ons or other external code to use MainMenu API to add buttons for Planetarium.
 * Copyright notices updated for 2020.
 
+### Bug fixes
+* Fixed bug causing target body to disappear momentarily during transition from Top to Zoom viewpoint.
+
 # _godot-3.2_ branch (submodule only)
 (Tested w/ Godot 3.2-beta5)
 
 ### Bug fixes
-* Button signal fixes. (Not compatible with Godot 3.1.2.) (Edit: some button widgets broken again in beta6. Will wait for now and probably fix in Godot 3.2 release or release candidate.)
+* Button signal fixes. (Not compatible with Godot 3.1.2.) (Edit: Some button widgets are broken again in beta6. I'll probably wait and fix with Godot 3.2 official release.)
