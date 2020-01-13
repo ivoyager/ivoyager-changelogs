@@ -12,5 +12,5 @@
 # _godot-3.2_ branch (submodule only)
 (Tested w/ Godot 3.2-beta5)
 
-### Bug fixes
+### 3.2 compatibility fixes
 * Button signal fixes. (Not compatible with Godot 3.1.2.) (Edit: Some button widgets are broken again in beta6. I'll probably wait and fix with Godot 3.2 official release.)
