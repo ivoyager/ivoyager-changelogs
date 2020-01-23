@@ -14,4 +14,4 @@
 (Tested w/ Godot 3.2 release candidate 2)
 
 ### 3.2 compatibility fixes
-* Button signal fixes. (Not compatible with Godot 3.1.2.)
+* Fixed GUI widgets to work with 3.2 button signal changes. (Not compatible with Godot 3.1.2.)
