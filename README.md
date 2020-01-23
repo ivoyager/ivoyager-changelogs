@@ -12,6 +12,10 @@
 
 # _godot-3.2_ branch (submodule only)
 (Tested w/ Godot 3.2 release candidate 2)
+Will merge into master with Godot 3.2 release.
 
 ### 3.2 compatibility fixes
 * Fixed GUI widgets to work with 3.2 button signal changes. (Not compatible with Godot 3.1.2.)
+
+### Changes
+* Fixed "Hide HUD when close" option to work without restart.
