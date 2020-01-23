@@ -8,7 +8,7 @@ Currently Godot version **3.1.2** but anticipating 3.2
 * Copyright notices updated for 2020.
 
 ### Bug fixes
-* Fixed bug causing target body to disappear momentarily during transition from Top to Zoom viewpoint.
+* Fixed bug causing target body to disappear momentarily during transition from Top to Zoom viewpoint (due to not updating near property during camera move).
 
 # _godot-3.2_ branch (submodule only)
 Tested w/ Godot 3.2 release candidate 2. Will merge into _master_ with Godot 3.2 release.
