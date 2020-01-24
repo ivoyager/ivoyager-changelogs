@@ -12,7 +12,4 @@ On Jan 24th we merged _godot-3.2_ branch into _master_. We are currently using *
 * Fixed bug causing target body to disappear momentarily during transition from Top to Zoom viewpoint (due to not updating `near` property during camera move).
 
 ### 3.2 compatibility fixes
-* Fixed GUI widgets to work with 3.2 button signal changes. (Not compatible with Godot 3.1.2.)
-
-# _godot-3.2_ branch (submodule only)
-Moved changes above. This branch will be deleted shortly.
+* Fixed GUI widgets to work with 3.2 button signal changes. (Not compatible with Godot 3.1.2!)
