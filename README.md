@@ -1,5 +1,5 @@
 # _master_ branch
-On Jan 24th we merged _godot-3.2_ branch into _master_. Currently using **Godot 3.2rc3**. Our next release will follow shortly after offical Godot 3.2 release.
+On Jan 24th we merged _godot-3.2_ branch into _master_. We are currently using **Godot 3.2rc3**; some changes are not compatible with 3.1.2! Our next release will follow shortly after offical Godot 3.2 release.
 
 ### Changes
 * Improved Planetarium GUI visibility control. GUI won't disapear when mouse in margin between GUI and screen edge.
