@@ -8,7 +8,7 @@ On Jan 24th we merged _godot-3.2_ branch into _master_. We are currently using *
 * Copyright notices updated for 2020.
 * Fixed "Hide HUD when close" option to work without restart.
 * Renamed ivoyager directories: "system_tree" & "system_refs" to "tree_nodes" & "tree_refs"
-* Made tree processing more logical: TreeManager subscribes to Timekeeper, calls tree_manager_process() for VoyagerCamera and then Body instances recursively.
+* Made tree processing more logical: TreeManager subscribes to Timekeeper, calls tree_manager_process() for VoyagerCamera and then Body instances.
 
 ### API breaking changes
 * Removed VoyagerCamera "processed" signal
