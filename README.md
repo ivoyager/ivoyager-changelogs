@@ -12,6 +12,7 @@ Currently using **Godot 3.2**; some changes are not compatible with 3.1.2! Our n
 
 ### API breaking changes
 * Removed VoyagerCamera "processed" signal.
+* Removed GregorianTimekeeper; its functions & members have been consolidated into its parent class Timekeeper.
 * Changed signature & return value for SaverLoader.debug_log() function. This is a fix for the free-standing Procedural Saver/Loader 1.1 in the Godot Asset Library. 
 
 ### 3.2 compatibility fixes
@@ -21,3 +22,4 @@ Currently using **Godot 3.2**; some changes are not compatible with 3.1.2! Our n
 * Fixed body momentary disappearance during camera move (due to not updating `near` property).
 * Fixed giant sun when loading game that was fully zoomed out.
 * Fixed date/time display when loading game that was paused.
+* Fixed Timekeeper.convert_date_time_string().
