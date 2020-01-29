@@ -1,5 +1,5 @@
 # _master_ branch
-On Jan 24th we merged _godot-3.2_ branch into _master_. We are currently using **Godot 3.2rc3**; some changes are not compatible with 3.1.2! Our next release will follow shortly after offical Godot 3.2 release.
+Currently using **Godot 3.2**; some changes are not compatible with 3.1.2! Our next release will follow shortly after offical Godot 3.2 release.
 
 ### Changes
 * Improved Planetarium GUI visibility control. GUI won't disapear when mouse in margin between GUI and screen edge.
@@ -12,6 +12,7 @@ On Jan 24th we merged _godot-3.2_ branch into _master_. We are currently using *
 
 ### API breaking changes
 * Removed VoyagerCamera "processed" signal.
+* Changed signature & return value for SaverLoader.debug_log() function. This is a fix for the free-standing Procedural Saver/Loader 1.1 in the Godot Asset Library. 
 
 ### 3.2 compatibility fixes
 * Fixed GUI widgets to work with 3.2 button signal changes. (Not compatible with Godot 3.1.2!)
