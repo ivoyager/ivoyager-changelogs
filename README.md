@@ -1,6 +1,5 @@
-# _master_ branch
-Currently using **Godot 3.2**; some changes are not compatible with 3.1.2!
-Submodule commit 0de1a64 is likely to become release v0.0.5 shortly.
+# v0.0.5
+(Godot version **3.2**)
 
 ### Changes
 * Improved Planetarium GUI visibility control. GUI won't disapear when mouse in margin between GUI and screen edge.
