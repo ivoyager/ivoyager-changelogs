@@ -1,25 +1,6 @@
-# v0.0.5
-(Godot version **3.2**)
+# _master_ branch
+Godot version **3.2**
+Requires ivoyager_assets-dev-2020-02-23!: [download](https://github.com/ivoyager/ivoyager/releases/download/v0.0.5-alpha/ivoyager_assets-dev-2020-02-23.zip)
 
 ### Changes
-* Improved Planetarium GUI visibility control. GUI won't disapear when mouse in margin between GUI and screen edge.
-* Full screen toggle (Shift-F) hides/shows all GUI for Planetarium. 
-* Planetarium uses common MainMenu rather than its own menu. This allows add-ons or other external code to use MainMenu API to add buttons for Planetarium.
-* Copyright notices updated for 2020.
-* Fixed "Hide HUD when close" option to work without restart.
-* Renamed ivoyager directories: "system_tree" & "system_refs" to "tree_nodes" & "tree_refs".
-* Made tree processing more logical: TreeManager subscribes to Timekeeper, calls tree_manager_process() for VoyagerCamera and then Body instances.
-
-### API breaking changes
-* Removed VoyagerCamera "processed" signal.
-* Removed GregorianTimekeeper; its functions & members have been consolidated into its parent class Timekeeper.
-* Changed signature & return value for SaverLoader.debug_log() function. This is a fix for the free-standing Procedural Saver/Loader 1.1 in the Godot Asset Library. 
-
-### 3.2 compatibility fixes
-* Fixed GUI widgets to work with 3.2 button signal changes. (Not compatible with Godot 3.1.2!)
-
-### Bug fixes
-* Fixed body momentary disappearance during camera move (due to not updating `near` property).
-* Fixed giant sun when loading game that was fully zoomed out.
-* Fixed date/time display when loading game that was paused.
-* Fixed Timekeeper.convert_date_time_string().
+* Added 3d models: Phobos, Diemos, Hyperon (& some asteroids but you can't select them yet).
