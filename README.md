@@ -15,7 +15,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
   * Added Global.table_types dictionary. This gives enum-like access to imported data table "types" (type = row number integer) by "key". You can access the type by key directly (moon_type = Global.table_types.MOON_EUROPA) or via individual table dicts (moon_type = Global.table_types.MoonTypes.MOON_EUROPA).
   * In the Global.tables dictionary, we now have 1 array (of arrays) and 1 dict for each imported table. For example, we have MoonData and MoonFields resulting from moon_data.csv. Combining w/ above change, you would get a data entry (e.g., Europa's albedo) as follows:
 ```
-var moon_type: int = Global.table_types.MOON_EUROPA # or table_types.MoonTypes.MOON_EUROPA
+var moon_type: int = Global.table_types.MOON_EUROPA # or Global.table_types.MoonTypes.MOON_EUROPA
 var albedo_field: int = Global.tables.MoonFields.albedo #  it's different in PlanetFields!
 var europa_data: Array = Global.tables.MoonData[moon_type]
 var albedo = europa_data[albedo_field]
