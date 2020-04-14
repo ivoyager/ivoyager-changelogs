@@ -16,9 +16,9 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
   * In the Global.tables dictionary, we now have 1 array (of arrays) and 1 dict for each imported table. For example, we have MoonData and MoonFields resulting from moon_data.csv. Combining w/ above change, you would get a data entry (e.g., Europa's albedo) as follows:
 ```
 var moon_type: int = Global.table_types.MOON_EUROPA # or Global.table_types.MoonTypes.MOON_EUROPA
-var albedo_field: int = Global.tables.MoonFields.albedo #  it's different in PlanetFields!
 var europa_data: Array = Global.tables.MoonData[moon_type]
-var albedo = europa_data[albedo_field]
+var albedo_column: int = Global.tables.MoonFields.albedo #  it's different in PlanetFields!
+var albedo = europa_data[albedo_column]
 ```
 * Added static class Enums (ivoyager/static/enums.gd). Moved enums here that are shared among multiple classes. (Enums used only in a class and its own function signatures still reside in the class.)
 * Added Global signals: "about_to_exit", "about_to_quit"
