@@ -1,7 +1,7 @@
 # _master_ branch
 Godot version **3.2.1**.
 
-Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-dev-2020-04-13.zip)
+Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-dev-2020-04-13.zip) (Older release 0.0.5 ivoyager_assets won't work!)
 
 ### Added
 * Added small moon 3d models: Phobos, Deimos, Hyperion.
