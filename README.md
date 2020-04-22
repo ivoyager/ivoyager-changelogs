@@ -18,7 +18,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
    * Global.times = \[sim_time (SI seconds since J2000), engine_time (accumulated delta), UT1 days] (floats)
    * Global.date = \[year, month, day] (ints)
    * Global.clock = \[hour, minute, second] (ints)
-* Added 3 "mouse drag modes" in ViewportInput (program_nodes/viewport_input.gd). Therre are project vars in ViewportInput that let you hook these up as you want, but by default we have:
+* Added 4 "mouse drag modes" in ViewportInput (program_nodes/viewport_input.gd). There are project vars in ViewportInput that let you hook these up as you want, but by default we have:
    * Left mouse button drag: moves camera around the target body.
    * Shift + any mouse button drag: pitch, yaw
    * Alt + any mouse button drag: roll
