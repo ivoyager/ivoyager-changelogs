@@ -13,7 +13,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
 * Added class TableHelper (program_refs/table_helper.gd). Look here to understand the new imported table encoding.
 * Added static class Enums (static/enums.gd). Moved enums here that are shared among multiple classes. (Enums used only in one class and its own function signatures still reside in the class.)
 * Added Global signals: "about_to_exit", "about_to_quit".
-* Real World GMT time (from user system clock). The Planetarium starts in "real world time" and can be reset to this in the time controls.
+* Added Timekeeper function to get real World GMT time (from user system clock). The Planetarium starts in "real world time" and can be reset to this in the time control GUI.
 * Added 3 Global arrays for timekeeping (these supercede Global.time_array). You can grab and keep a reference to these in your class file header (e.g., var clock: Array = Global.clock):
    * Global.times = \[sim_time (SI seconds since J2000), engine_time (accumulated delta), UT1 days] (floats)
    * Global.date = \[year, month, day] (ints)
