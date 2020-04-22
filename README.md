@@ -6,7 +6,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 Notes: There is a lot of API-breakage lately - I want to do that now before we go to official beta! There is also a new graphic "hang" that happens exactly at the half-way point of a camera movement (almost certainly coincident with camera changing parents). It could be related to the new 3d models, or to Godot 3.2.x update, or something I screwed up in the code... 
 
 ### Added
-* Added small moon 3d models: Phobos, Deimos, Hyperion.
+* Added small moon 3d models: Phobos, Deimos, Hyperion (plus a couple asteroids but you can't visit these yet).
 * More planetary data (surface atmos pressure, surface temp, etc.) is imported into Body object. This is shown in Project Template but not (yet) in Planetarium. (I need to add a new "body info" popup for the Planetarium.)
 * Added static class UnitDefs (static/unit_defs.gd) that defines base and derived units, and all simulator internal representation. It provides constants, dictionaries and functions for unit conversion.
 * Added class QtyStrings (program_refs/qty_strings.gd) for generating GUI quantity strings with units. User specifies display units and other options, but does not need to know sim internal units. For example, functions can be called to display an internal mass property in pure SI form "3.00x10^15 kg" or more sci-fi style "3.00 Terratonnes".
