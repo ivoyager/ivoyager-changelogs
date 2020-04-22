@@ -18,7 +18,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
 * Renamed all .csv data tables in data/solar_system/ directory.
 * External .csv data table row headers Default_Value & Unit_Conversion changed to Defaults & Units. Units row now takes strings such as "km", "au", "1/century", "10^24 kg", "km^3/s^2"; see static/unit_defs.gd for allowed symbols. Data tables no longer need to know sim internal units.
-* A large chuck of BCamera code was split off into a new class: ViewportInput. The new class handles input not handled by InputHandler or various GUIs (which is mostly about camera movement but also viewport click selection).
+* A large chuck of BCamera code was split off into a new class: ViewportInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
 
 
 ### API-Breaking Changes
