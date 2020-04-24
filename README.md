@@ -7,7 +7,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
 
 ### Added
 * Added small moon 3d models: Phobos, Deimos, Hyperion (plus a couple asteroids but you can't visit these yet).
-* More planetary data (surface atmos pressure, surface temp, etc.) is imported into Body object. This is shown in Project Template but not (yet) in Planetarium. (I need to add a new "body info" popup for the Planetarium.)
+* More planetary data (surface atmos pressure, surface temp, etc.).
 * Added static class UnitDefs (static/unit_defs.gd) that defines base and derived units, and all simulator internal representation. It provides constants, dictionaries and functions for unit conversion.
 * Added class QtyStrings (program_refs/qty_strings.gd) for generating GUI quantity strings with units. User specifies display units and other options, but does not need to know sim internal units. For example, functions can be called to display an internal mass property in pure SI form "3.00x10^15 kg" or more sci-fi style "3.00 Terratonnes".
 * Added class TableHelper (program_refs/table_helper.gd). Look here to understand the new imported table encoding.
@@ -24,8 +24,9 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
    * Alt + any mouse button drag: roll
    * Cntr + any mouse button OR right button drag: "hybrid" of above two (pitch, yaw if mouse near screen center; roll if near screen edge).
 ### Changes
+* Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
-* Renamed all .csv data tables in data/solar_system/ directory.
+* Renamed all .csv data tables in data/solar_system/ directory (simplified to "planets.csv", etc.).
 * External .csv data table row headers Default_Value & Unit_Conversion changed to Defaults & Units. Units row now takes strings such as "km", "au", "1/century", "10^24 kg", "km^3/s^2"; see static/unit_defs.gd for allowed symbols. Data tables no longer need to know sim internal units.
 * A large chuck of BCamera code was split off into a new class: ViewportInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
 * BCamera is now fully replaceable with another Camera class in ProjectBuilder (ie, you don't have to subclass BCamera). See comments in tree_nodes/b_camera.gd for tips on this (you'll still need to match some BCamera API and/or modify some other classes).
