@@ -23,7 +23,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
    * Shift + any mouse button drag: pitch, yaw
    * Alt + any mouse button drag: roll
    * Cntr + any mouse button OR right button drag: "hybrid" of above two (pitch, yaw if mouse near screen center; roll if near screen edge).
-* Added bit of smoothing in camera motions.
+* Added smoothing for camera motions and rotations.
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
