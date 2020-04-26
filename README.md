@@ -23,6 +23,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
    * Shift + any mouse button drag: pitch, yaw
    * Alt + any mouse button drag: roll
    * Cntr + any mouse button OR right button drag: "hybrid" of above two (pitch, yaw if mouse near screen center; roll if near screen edge).
+* Added bit of smoothing in camera motions.
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -30,6 +31,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
 * External .csv data table row headers Default_Value & Unit_Conversion changed to Defaults & Units. Units row now takes strings such as "km", "au", "1/century", "10^24 kg", "km^3/s^2"; see static/unit_defs.gd for allowed symbols. Data tables no longer need to know sim internal units.
 * A large chuck of BCamera code was split off into a new class: ViewportInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
 * BCamera is now fully replaceable with another Camera class in ProjectBuilder (i.e., you don't have to subclass BCamera). See comments in tree_nodes/b_camera.gd for tips on this (you'll still need to match some BCamera API and/or modify some other classes).
+* BCamera can now traverse poles. Movement/rotation code is more comprehensible and robust (although a full overhaul to quaternions would be better than existing code).
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableHelper for how to get data from row/column identifiers. Global.tables & Global.table_types were replaced by Global.table_data, Global.table_fields & Global.table_rows.
