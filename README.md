@@ -3,7 +3,12 @@ Godot version **3.2.1**.
 
 Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-dev-2020-04-13.zip) (Older release 0.0.5 ivoyager_assets won't work due to changes in the asteroid binaries.)
 
-Notes: There is a lot of API-breakage lately - I want to do that now before we go to official beta! There is also a new graphic "hang" that happens exactly at the half-way point of a camera movement (almost certainly coincident with camera changing parents). It could be related to the new 3d models, or to Godot 3.2.x update, or something I screwed up in the code... 
+Note 1: There is a lot of API-breakage lately! I want to do that now before we go to official beta.
+Note 2: We changed the main scene to Universe! If you update the ivoyager submodule in your own project, you will need to change two settings in project.godot manually:
+   run/main_scene="res://ivoyager/tree_nodes/universe.tscn"
+   main_scene="res://ivoyager/ui_admin/gui_top.tscn"
+   (For some reason the 2nd doesn't update if you do this from the editor!)
+Note 3: There is also a new graphic "hang" that happens exactly at the half-way point of a camera movement (almost certainly coincident with camera changing parents). It could be related to the new 3d models, or to Godot 3.2.x update, or something I screwed up in the code... 
 
 ### Added
 * Added small moon 3d models: Phobos, Deimos, Hyperion (plus a couple asteroids but you can't visit these yet).
@@ -24,6 +29,7 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
    * Alt + any mouse button drag: roll
    * Cntr + any mouse button OR right button drag: "hybrid" of above two (pitch, yaw if mouse near screen center; roll if near screen edge).
 * Added smoothing for camera motions and rotations.
+* Added "Universe" as the top Spatial and main scene root. We previously did a scene change after solar system build and when exiting, but now it just stays Universe at all times. 
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -38,9 +44,11 @@ Notes: There is a lot of API-breakage lately - I want to do that now before we g
 * Changed Global.enums. It was a dictionary. It now holds a reference to the actual Enums static class. The reason we have a reference in Global is so you can extend Enums class (with your own enums) and set Global.enums to it. (program_refs/table_helper.gd uses this.)
 * Renamed Global.objects -> Global.program. (This holds single instance program_nodes & program_refs.)
 * ~~Renamed Global.time_array -> Global.time_date~~ Global.time_array superceded; see Global.times, .date, .clock above. 
-* Renamed Global signals; require_stop_requested -> sim_stop_required, allow_run_requested -> sim_run_allowed
+* Renamed Global signals; require_stop_requested -> sim_stop_required, allow_run_requested -> sim_run_allowed, about_to_add_environment -> environment_created
 * Renamed Orbit.get_cartesian() -> get_vectors() & get_cartesian_from_elements() -> get_vectors_from_elements()
 * Removed StringMaker. Replaced by more powerful QtyStrings.
 * Renamed VoyagerCamera -> BCamera. (B for Body; presumably others will add "free flight" or other cameras.) Most of BCamera interface has changed.
-* Renamed VoyagerEnvironment -> VEnv.
 * Changes to Timekeeper interface.
+* Registrar.top_body changed to top_bodies (an array; only the Sun now but could be, for example, a group of stars).
+* Removed a bunch of "passive" tree classes that had only init() function. (New builder classes generate these.)
+* Removed GUITop. (Universe is now the main scene at start and stays so after solar system build.)
