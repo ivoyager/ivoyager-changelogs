@@ -22,7 +22,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
    * Global.times = \[sim_time (SI seconds since J2000), engine_time (accumulated delta), UT1 days] (floats)
    * Global.date = \[year, month, day] (ints)
    * Global.clock = \[hour, minute, second] (ints)
-* Added 4 "mouse drag modes" in ViewportInput (program_nodes/viewport_input.gd). There are project vars in ViewportInput that let you hook these up as you want, but by default we have:
+* Added 4 "mouse drag modes" in BCameraInput (program_nodes/viewport_input.gd). There are project vars in ViewportInput that let you hook these up as you want, but by default we have:
    * Left mouse button drag: moves camera around the target body.
    * Shift + any mouse button drag: pitch, yaw
    * Alt + any mouse button drag: roll
@@ -34,7 +34,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
 * Renamed all .csv data tables in data/solar_system/ directory (simplified to "planets.csv", etc.).
 * External .csv data table row headers Default_Value & Unit_Conversion changed to Defaults & Units. Units row now takes strings such as "km", "au", "1/century", "10^24 kg", "km^3/s^2"; see static/unit_defs.gd for allowed symbols. Data tables no longer need to know sim internal units.
-* A large chuck of BCamera code was split off into a new class: ViewportInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
+* A large chuck of BCamera code was split off into a new class: BCameraInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
 * BCamera is now fully replaceable with another Camera class in ProjectBuilder (i.e., you don't have to subclass BCamera). See comments in tree_nodes/b_camera.gd for tips on this (you'll still need to match some BCamera API and/or modify some other classes).
 * BCamera can now traverse poles. Movement/rotation code is more comprehensible and robust (although a full overhaul to quaternions would be better than existing code).
 ### API-Breaking Changes
@@ -48,6 +48,6 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Removed StringMaker. Replaced by more powerful QtyStrings.
 * Renamed VoyagerCamera -> BCamera. (B for Body; presumably others will add "free flight" or other cameras.) Most of BCamera interface has changed.
 * Changes to Timekeeper interface.
-* Registrar.top_body changed to top_bodies (an array; only the Sun now but could be, for example, a group of stars).
-* Removed a bunch of "passive" tree classes that had only init() function. (New builder classes generate these.)
+* Registrar.top_body changed to top_bodies (an array; contains only the Sun now but could contain, for example, a group of stars).
+* Removed a bunch of "passive" tree_nodes classes that had only init() function: Model, HUDLabel, HUDIcon, Starlight, TempRings & VoyagerEnvironment. New "builder" classes generate the relevant base classes and add them as needed.
 * Removed GUITop. (Universe is now the main scene at start and stays so after solar system build.)
