@@ -31,7 +31,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Added "Universe" as the top Spatial and main scene root. We previously did a scene change after solar system build and when exiting, but now it just stays Universe at all times.
 * Added new factory classes (all in ivoyager/program_refs/): EnvironmentBuilder, HUDsBuilder, ModelBuilder, LightBuilder.
 * Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki_en title for url linking.
-* SelectionData widget shows "classification" from classes.csv table above, and provides project var to make these into links to Wikipedia (false by default, but Planetarium sets this to true).
+* SelectionData widget shows "classification" from classes.csv table above, and provides option to make these into Wikipedia links (off by default, but Planetarium sets to on).
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -47,7 +47,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Improved distance selection when moving BCamera between bodies of different sizes.
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
-* All imported data table access is different. See class TableHelper for how to get data from row/column identifiers. Global.tables & Global.table_types were replaced by Global.table_data, Global.table_fields & Global.table_rows.
+* All imported data table access is different. See class TableHelper (program_refs/table_helper.gd) for how to get data from row/column identifiers. Global.tables & Global.table_types were replaced by Global.table_data, Global.table_fields, Global.table_data_types & Global.table_rows.
 * Changed Global.enums. It was a dictionary. It now holds a reference to the actual Enums static class. The reason we have a reference in Global is so you can extend Enums class (with your own enums) and set Global.enums to it. (program_refs/table_helper.gd uses this.)
 * Renamed Global.objects -> Global.program. (This holds single instance program_nodes & program_refs.)
 * ~~Renamed Global.time_array -> Global.time_date~~ Global.time_array superceded; see Global.times, Global.date, Global.clock above. 
