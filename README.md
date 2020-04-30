@@ -30,7 +30,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Added smoothing for camera motions and rotations.
 * Added "Universe" as the top Spatial and main scene root. We previously did a scene change after solar system build and when exiting, but now it just stays Universe at all times.
 * Added new factory classes (all in ivoyager/program_refs/): EnvironmentBuilder, HUDsBuilder, ModelBuilder, LightBuilder.
-* Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki title for url linking.
+* Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki_en title for url linking.
 * SelectionData widget shows "classification" from classes.csv table above, and provides project var to make these into links to Wikipedia (false by default, but Planetarium sets this to true).
 ### Changes
 * Total makeover for Planetarium GUI.
