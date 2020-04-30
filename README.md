@@ -30,6 +30,8 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Added smoothing for camera motions and rotations.
 * Added "Universe" as the top Spatial and main scene root. We previously did a scene change after solar system build and when exiting, but now it just stays Universe at all times.
 * Added new factory classes (all in ivoyager/program_refs/): EnvironmentBuilder, HUDsBuilder, ModelBuilder, LightBuilder.
+* Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki title for url linking.
+* SelectionData widget shows "classification" from classes.csv table above, and provides project var to make these into links to Wikipedia (false by default, but Planetarium sets this to true).
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -38,6 +40,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * A large chuck of BCamera code was split off into a new class: BCameraInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
 * BCamera is now fully replaceable with another Camera class in ProjectBuilder (i.e., you don't have to subclass BCamera). See comments in tree_nodes/b_camera.gd for tips on this (you'll still need to match some BCamera API and/or modify some other classes).
 * BCamera can now traverse poles. Movement/rotation code is more comprehensible and robust (although a full overhaul to quaternions would be better than existing code).
+* Improved distance selection when moving BCamera between bodies of different sizes.
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableHelper for how to get data from row/column identifiers. Global.tables & Global.table_types were replaced by Global.table_data, Global.table_fields & Global.table_rows.
@@ -52,3 +55,5 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Registrar.top_body changed to top_bodies (an array; contains only the Sun now but could contain, for example, a group of stars).
 * Removed a bunch of "passive" tree_nodes classes that had only init() function: Model, HUDLabel, HUDIcon, Starlight, TempRings & VoyagerEnvironment. New "builder" classes generate the relevant base classes and add them as needed.
 * Removed GUITop. (Universe is now the main scene at start and stays so after solar system build.)
+* Renamed bodies.csv to models.csv (this table is about graphic representation of bodies).
+* Data tables have three new Data_Types: ENUM, TABLE and BODY (all were just STRING before). Code needs these to understand what the data is supposed to represent.
