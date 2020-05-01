@@ -45,6 +45,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * BCamera is now fully replaceable with another Camera class in ProjectBuilder (i.e., you don't have to subclass BCamera). See comments in tree_nodes/b_camera.gd for tips on this (you'll still need to match some BCamera API and/or modify some other classes).
 * BCamera can now traverse poles. Movement/rotation code is more comprehensible and robust (although a full overhaul to quaternions would be better than existing code).
 * Improved distance selection when moving BCamera between bodies of different sizes.
+* Lazy init for minor moon models (and uniniting for models not visited for a while). This cuts the number of models at any time from >130 to <30, which is a HUGE improvement for low end graphics computers!
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableHelper (program_refs/table_helper.gd) for how to get data from row/column identifiers. Global.tables & Global.table_types were replaced by Global.table_data, Global.table_fields, Global.table_data_types & Global.table_rows.
