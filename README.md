@@ -36,11 +36,11 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
 * Renamed all .csv data tables in data/solar_system/ directory (simplified to "planets.csv", etc.).
-* External .csv data table row headers Default_Value & Unit_Conversion changed to Default & Units. Units row now takes strings such as "km", "au", "1/century", "10^24 kg", "km^3/s^2"; see static/unit_defs.gd for allowed symbols. Data tables no longer need to know sim internal units.
-* Data tables have three new Data_Types to assist object building:
-   * ENUM - interpreted as int based on enums in Enums static class (or whatever Global.enums points to).
-   * TABLE - interpreted as int row number of some table item (e.g., CLASS_G_STAR).
-   * BODY - interpreted as Body instance by that name (e.g., PLANET_EARTH).
+* External .csv data table row headers Data_Type, Default_Value & Unit_Conversion changed to DataType, Default & Units. Units row now takes strings such as "km", "au", "1/century", "10^24 kg", "km^3/s^2"; see static/unit_defs.gd for allowed symbols. Data tables no longer need to know sim internal units.
+* Data tables accept new DataType 's to assist object building:
+   * "DATA" - interpreted as row number (int) of item in any imported data table (e.g., CLASS_G_STAR).
+   * "BODY" - interpreted as Body instance by that name (e.g., PLANET_EARTH).
+   * Any enum name in the Enums static class (or replacement class specified in Global.enums) - interpreted as enum (int).
 * A large chuck of BCamera code was split off into a new class: BCameraInput. The new class handles input not handled by InputHandler or various GUIs (what's left is camera movement control plus viewport click selection).
 * BCamera is now fully replaceable with another Camera class in ProjectBuilder (i.e., you don't have to subclass BCamera). See comments in tree_nodes/b_camera.gd for tips on this (you'll still need to match some BCamera API and/or modify some other classes).
 * BCamera can now traverse poles. Movement/rotation code is more comprehensible and robust (although a full overhaul to quaternions would be better than existing code).
