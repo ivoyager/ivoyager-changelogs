@@ -32,7 +32,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Added new factory classes (all in ivoyager/program_refs/): EnvironmentBuilder, HUDsBuilder, ModelBuilder, LightBuilder.
 * Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki_en title for url linking.
 * SelectionData widget shows "classification" from classes.csv table above, and provides option to make these into Wikipedia links (off by default, but Planetarium sets to on).
-* Added Body.flags and Enums.BodyFlags. Flag logic supercedes many boolean members removed from Body.
+* Added Body.flags and Enums.BodyFlags. Flag logic supercedes previous boolean members and selection_type (removed).
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
