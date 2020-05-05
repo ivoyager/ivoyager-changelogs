@@ -33,6 +33,8 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki_en title for url linking.
 * SelectionData widget shows "classification" from classes.csv table above, and provides option to make these into Wikipedia links (off by default, but Planetarium sets to on).
 * Added Body.flags and Enums.BodyFlags. Flag logic supercedes previous boolean members and selection_type (removed).
+* Added Body components Rotations & Properties (new tree_ref classes). Together with Orbit, these define almost everything about Body.
+* Implementing decimal precision (partially completed). Table significant digits are maintained in display, even after conversion. (Not done yet: derived properties like surface gravity will have proper precision based on source table data).
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
