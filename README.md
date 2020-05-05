@@ -34,7 +34,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * SelectionData widget shows "classification" from classes.csv table above, and provides option to make these into Wikipedia links (off by default, but Planetarium sets to on).
 * Added Body.flags and Enums.BodyFlags. Flag logic supercedes previous boolean members and selection_type (removed).
 * Added Body components Rotations & Properties (new tree_ref classes). Together with Orbit, these define almost everything about Body.
-* Implementing decimal precision (partially completed). Table significant digits are maintained in display, even after conversion. (Not done yet: derived properties like surface gravity will have proper precision based on source table data).
+* Implementing decimal precision (partially completed). Table significant digits are maintained in display, even after import unit conversion. (Not done yet: derived properties like surface gravity.)
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -49,6 +49,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * BCamera can now traverse poles. Movement/rotation code is more comprehensible and robust (although a full overhaul to quaternions would be better than existing code).
 * Improved distance selection when moving BCamera between bodies of different sizes.
 * Lazy init for minor moon models (and uniniting for models not visited for a while). This cuts the number of models at any time from >130 to <30, which is a HUGE improvement for low end graphics computers!
+* Directory program_refs split into prog_builders and prog_refs (the former are factory classes, the latter are runtime classes). Also renamed program_nodes -> prog_nodes.
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableHelper (program_refs/table_helper.gd) for how to get data from row/column identifiers. Global.tables & Global.table_types were replaced by Global.table_data, Global.table_fields, Global.table_data_types & Global.table_rows.
@@ -66,3 +67,4 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Renamed bodies.csv to models.csv (this table is about graphic representation of bodies).
 * Removed Enums.SelectionTypes (and related members in Body and SelectionItem). Code cruft.
 * Many Body boolean members are superceded by Body.flags.
+* ProjectBuilder.program_refs dictionary was split into program_builders and program_refs (corresponding to directory changes listed above).
