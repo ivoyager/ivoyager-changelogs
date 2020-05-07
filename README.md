@@ -34,6 +34,7 @@ Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoya
 * Added Body.flags and Enums.BodyFlags. Flag logic supercedes previous boolean members and selection_type (removed).
 * Added Body components Rotations & Properties (new tree_ref classes). Together with Orbit, these define almost everything about Body.
 * Implemented decimal precision. Table significant digits are maintained in display, even after import unit conversion and for derived values.
+* For external project support, we now have a "fall-through" system for finding models and model textures. See new Global.model_search and Global.texture_search.
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
