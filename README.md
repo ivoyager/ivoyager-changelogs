@@ -34,7 +34,7 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 * Added Body.flags and Enums.BodyFlags. Flag logic supercedes previous boolean members and selection_type (removed).
 * Added Body components Rotations & Properties (new tree_ref classes). Together with Orbit, these define almost everything about Body.
 * Implemented decimal precision. Table significant digits are maintained in display, even after import unit conversion and for derived values.
-* For external project support, we now have a "fall-through" system for finding models and model textures. See new Global.model_search and Global.texture_search.
+* For external project support, we now have a "fall-through" system for finding models, world maps, icons, body 2D images, and rings. See "search" arrays in Global.
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -68,3 +68,4 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 * Removed Enums.SelectionTypes (and related members in Body and SelectionItem). Code cruft.
 * Many Body boolean members are superceded by Body.flags.
 * ProjectBuilder.program_refs dictionary was split into program_builders and program_refs (corresponding to directory changes listed above).
+* Reorganized arrays & dicts that hold asset paths/directories in Global.
