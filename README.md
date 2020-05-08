@@ -1,7 +1,7 @@
 # _master_ branch
 Godot version **3.2.1**.
 
-Requires **ivoyager_assets-dev-2020-04-13**: [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-dev-2020-04-13.zip) (Older release 0.0.5 ivoyager_assets won't work due to changes in the asteroid binaries.)
+Requires **ivoyager_assets-dev-2020-05-08**: [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-master-2020-05-08.zip) (Older release 0.0.5 ivoyager_assets won't work due to changes in the asteroid binaries.)
 
 * Note 1: There is a lot of API-breakage lately! I want to do that now before we go to official beta.
 * Note 2: We changed the main scene to Universe! If you update the ivoyager submodule in your own project, you will need to change two settings in project.godot manually (I don't know why there are two! and for some reason, the 2nd doesn't update when changed from editor):
