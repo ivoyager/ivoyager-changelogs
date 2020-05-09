@@ -53,7 +53,7 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableReader (program_refs/table_reader.gd) for table data access.
-* Changed Global.enums. It was a dictionary. It now holds a reference to the actual Enums static class. The reason we have a reference in Global is so you can extend Enums class (with your own enums) and set Global.enums to it.
+* Changed Global.enums. It was a dictionary. It now holds a reference to the actual Enums static class. The reason we have a reference in Global is so you can extend Enums class (with your own enums), set Global.enums to it, and then classes can find them (e.g., TableReader).
 * Renamed Global.objects -> Global.program. (This holds single instance program_nodes & program_refs.)
 * ~~Renamed Global.time_array -> Global.time_date~~ Global.time_array superceded; see Global.times, Global.date, Global.clock above. 
 * Renamed Global signals; require_stop_requested -> sim_stop_required, allow_run_requested -> sim_run_allowed, about_to_add_environment -> environment_created
