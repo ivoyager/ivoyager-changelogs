@@ -35,6 +35,9 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 * Added Body components Rotations & Properties (new tree_ref classes). Together with Orbit, these define almost everything about Body.
 * Implemented decimal precision. Table significant digits are maintained in display, even after import unit conversion and for derived values.
 * For external project support, we now have a "fall-through" system for finding models, world maps, icons, body 2D images, and rings. See "search" arrays in Global.
+* Added Global.is_gles2 (autodetects).
+* Added Global.auto_exposure_enabled (project setting). EnvironmentBuilder sets from Global value.
+* First attempt at HDR, auto-exposure, glow/bloom. EnvironmentBuilder, LightBuilder & ModelBuilder attempt to compensate for 3 different scenarios: 1. GLES2; 2. GLES3, auto_exposure_enabled = true; 3. GLES3, auto_exposure_enabled = false. 
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
