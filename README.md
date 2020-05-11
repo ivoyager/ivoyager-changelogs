@@ -32,12 +32,13 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 * Added data table classes.csv with basic astronomical classifications like G-Type Star, Terrestrial Planet, Gas Giant, C-Type Asteroid, etc. Includes wiki_en title for url linking.
 * SelectionData widget shows "classification" from classes.csv table above, and provides option to make these into Wikipedia links (off by default, but Planetarium sets to on).
 * Added Body.flags and Enums.BodyFlags. Flag logic supercedes previous boolean members and selection_type (removed).
-* Added Body components Rotations & Properties (new tree_ref classes). Together with Orbit, these define almost everything about Body.
+* Added Body components ~~Rotations~~ ModelManager & Properties (new tree_ref classes). ModelManager handles model rotations and Properties is just a container. Together with Orbit, these define almost everything about Body.
 * Implemented decimal precision. Table significant digits are maintained in display, even after import unit conversion and for derived values.
 * For external project support, we now have a "fall-through" system for finding models, world maps, icons, body 2D images, and rings. See "search" arrays in Global.
 * Added Global.is_gles2 (autodetects).
 * Added Global.auto_exposure_enabled (project setting). EnvironmentBuilder sets from Global value.
-* First attempt at HDR, auto-exposure, glow/bloom. EnvironmentBuilder, LightBuilder & ModelBuilder attempt to compensate for 3 different scenarios: 1. GLES3, auto_exposure_enabled = true; 2. GLES3, auto_exposure_enabled = false; 3. GLES2. 
+* First attempt at HDR, auto-exposure, glow/bloom. EnvironmentBuilder, LightBuilder & ModelBuilder attempt to compensate for 3 different scenarios: 1. GLES3, auto_exposure_enabled = true; 2. GLES3, auto_exposure_enabled = false; 3. GLES2.
+* Dynamic stars! ModelManager can grow stars (i.e., the Sun) at large distances so they stay visible >2 au out. It also regulates surface emission_engergy dynamically for appropriate auto-exposure effect (i.e., a huge amount at or inside Mercury, strong at Earth, weak at Jupiter, then unnoticeable).
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
