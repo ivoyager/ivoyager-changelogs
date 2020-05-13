@@ -40,7 +40,7 @@ Requires **ivoyager_assets-dev-2020-05-13** (updated for 195129a): [download](ht
 * First attempt at HDR, auto-exposure, glow/bloom. EnvironmentBuilder, LightBuilder & ModelBuilder attempt to compensate for 3 different scenarios: 1. GLES3, auto_exposure_enabled = true; 2. GLES3, auto_exposure_enabled = false; 3. GLES2.
 * Dynamic stars! ModelManager can grow stars (i.e., the Sun) at large distances so they stay visible >2 au out. It also regulates surface emission_engergy dynamically for appropriate auto-exposure effect (i.e., a huge amount at or inside Mercury, strong at Earth, weak at Jupiter, then unnoticeable).
 * ModelBuilder now loads "emission" textures. (**Requires new ivoyager_assets-master-2020-05-13!**)
-* Added new font "Roboto-NotoSansSymbol-merge.ttf" which is a custom font merge. It has all of our astronomical body symbols plus MANY other useful symbols (an old-fashoned phone, guy at beach, whatever you might need for your game...). 
+* Added new font "Roboto-NotoSansSymbol-merge.ttf" which is a custom font merge. It has all of our astronomical body symbols plus MANY other useful symbols (an old-fashoned phone, guy at beach, whatever you might need for your game...). (**Requires new ivoyager_assets-master-2020-05-13!**)
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
