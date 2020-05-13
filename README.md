@@ -1,7 +1,7 @@
 # _master_ branch
 Godot version **3.2.1**.
 
-Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-master-2020-05-08.zip)
+Requires **ivoyager_assets-dev-2020-05-13** (updated for 195129a): [download](https://github.com/ivoyager/ivoyager-changelogs/releases/download/dev-assets/ivoyager_assets-master-2020-05-13.zip)
 
 * Note 1: There is a lot of API-breakage lately! I want to do that now before we go to official beta.
 * Note 2: We changed the main scene to Universe! If you update the ivoyager submodule in your own project, you will need to change two settings in project.godot manually (I don't know why there are two! and for some reason, the 2nd doesn't update when changed from editor):
@@ -39,6 +39,8 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 * Added Global.auto_exposure_enabled (project setting). EnvironmentBuilder sets from Global value.
 * First attempt at HDR, auto-exposure, glow/bloom. EnvironmentBuilder, LightBuilder & ModelBuilder attempt to compensate for 3 different scenarios: 1. GLES3, auto_exposure_enabled = true; 2. GLES3, auto_exposure_enabled = false; 3. GLES2.
 * Dynamic stars! ModelManager can grow stars (i.e., the Sun) at large distances so they stay visible >2 au out. It also regulates surface emission_engergy dynamically for appropriate auto-exposure effect (i.e., a huge amount at or inside Mercury, strong at Earth, weak at Jupiter, then unnoticeable).
+* ModelBuilder now loads "emission" textures. (**Requires new ivoyager_assets-master-2020-05-13!**)
+* Added new font "Roboto-NotoSansSymbol-merge.ttf" which is a custom font merge. It has all of our astronomical body symbols plus MANY other useful symbols (an old-fashoned phone, guy at beach, whatever you might need for your game...). 
 ### Changes
 * Total makeover for Planetarium GUI.
 * Recolored the fallback globe model for non-imaged bodies; now grey with whitish lat/long grid.
@@ -54,6 +56,7 @@ Requires **ivoyager_assets-dev-2020-05-08** (updated for 0cce1d1): [download](ht
 * Improved distance selection when moving BCamera between bodies of different sizes.
 * Lazy init for minor moon models (and uniniting for models not visited for a while). This cuts the number of models at any time from >130 to <30, which is a HUGE improvement for low end graphics computers!
 * Directory program_refs split into prog_builders and prog_refs (the former are factory classes, the latter are runtime classes). Also renamed program_nodes -> prog_nodes.
+* Labels/Icons were changed to Names/Symbols in the GUI. Both names & symbols display via HUDLabel object. (The old HUDIcon system using a billboard QuadMesh & Texture was removed.)
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableReader (program_refs/table_reader.gd) for table data access.
