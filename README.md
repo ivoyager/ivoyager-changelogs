@@ -57,6 +57,7 @@ Requires **ivoyager_assets-dev-2020-05-13** (updated for 195129a): [download](ht
 * Lazy init for minor moon models (and uniniting for models not visited for a while). This cuts the number of models at any time from >130 to <30, which is a HUGE improvement for low end graphics computers!
 * Directory program_refs split into prog_builders and prog_refs (the former are factory classes, the latter are runtime classes). Also renamed program_nodes -> prog_nodes.
 * Labels/Icons were changed to Names/Symbols in the GUI. Both names & symbols display via HUDLabel object. (The old HUDIcon system using a billboard QuadMesh & Texture was removed.)
+* Improved star maps.
 ### API-Breaking Changes
 * Removed Global.scale (superseded by UnitDefs.METER). There may be other API breakages related to the units/scaling overhaul.
 * All imported data table access is different. See class TableReader (program_refs/table_reader.gd) for table data access.
