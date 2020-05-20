@@ -3,7 +3,7 @@
 
 Notes:
 1. Requires **ivoyager_assets-0.0.6**: [download](https://github.com/ivoyager/ivoyager/releases/download/v0.0.6-alpha/ivoyager_assets-0.0.6.zip)
-2. Translations are now loaded from Global.translations so extensions can add w/out access to project.godot. If you're updating ivoyager submodule only, you should delete all localization files in the editor.
+2. Translations are now loaded from Global.translations so extensions can add w/out access to project.godot and for "\uHHHH" support. If you're updating ivoyager submodule only, you should delete all localization files in the editor and add your project-specific files (if any) to Global.translations. You must set "compress=false" in the .import files if you want "\uHHHH" support.
 
 ## Changes
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
