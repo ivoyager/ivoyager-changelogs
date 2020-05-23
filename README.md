@@ -7,6 +7,6 @@ Notes:
 
 ## Changes
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
-* Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in localized text and data tables. To make this work, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
+* Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in data table files and localized text files. To make this work for localized text, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
 * Changed .gitignore to allow tracking of export_presets.cfg in the project directories.
 * HTML5 export projects close their own browser window on quitting.
