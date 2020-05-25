@@ -1,9 +1,9 @@
 # _master_ branch
-(Godot version **3.2.1**)
+Godot version: **3.2.1**
+Requires: **ivoyager_assets-0.0.6a**: [download here](https://github.com/ivoyager/ivoyager/releases/download/v0.0.6-alpha/ivoyager_assets-0.0.6a.zip)
 
 Notes:
-1. Requires **ivoyager_assets-0.0.6a**: [download here](https://github.com/ivoyager/ivoyager/releases/download/v0.0.6-alpha/ivoyager_assets-0.0.6a.zip).
-2. Translations are now loaded from Global.translations for two reasons: a) so extensions can add w/out access to project.godot and b) for unicode support using \uHHHH escape code. If you're updating ivoyager submodule only, you should delete all localization files in the editor (i.e., from project.godot). Add them to Global.translations, via extension code at extension_init(), and reimport text.csv files with compress OFF (this is required only if you need unicode support).
+1. Translations are now loaded from Global.translations for two reasons: a) so extensions can add w/out access to project.godot and b) for unicode support using \uHHHH escape code. If you're updating ivoyager submodule only, you should delete all localization files in the editor (i.e., from project.godot). Add them to Global.translations, via extension code at extension_init(), and reimport text.csv files with compress OFF (this is required only if you need unicode support).
 
 ## Changes
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
