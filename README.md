@@ -6,6 +6,9 @@ Requires: **ivoyager_assets-0.0.6a**: [download here](https://github.com/ivoyage
 Notes:
 1. Translations are now loaded from Global.translations for two reasons: a) so extensions can add w/out access to project.godot and b) for unicode support using \uHHHH escape code. If you're updating ivoyager submodule only, you should delete all localization files in the editor (i.e., from project.godot). Add them to Global.translations, via extension code at extension_init(), and reimport text.csv files with compress OFF (compress OFF required for unicode support; it may allow other modifications in the future).
 
+## Added
+* An [Electron wrapper](https://www.electronjs.org/) for the Planetarium project. Find in repository [electron_app](https://github.com/ivoyager/electron_app). This integrates the planetarium with its own web browser. There are advantages and disadvantages to doing this. We'll have to do some performance tests.
+
 ## Changes
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
 * Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in data table files and localized text files. To make this work for localized text, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
