@@ -1,7 +1,7 @@
 # _master_ branch
 Godot version: **3.2.1**
 
-Requires: **ivoyager_assets-0.0.6a**: [download here](https://github.com/ivoyager/ivoyager/releases/download/v0.0.6-alpha/ivoyager_assets-0.0.6a.zip)
+Requires: **ivoyager_assets-2020-05-28**: [download here](https://github.com/ivoyager/changelogs/releases/download/dev-assets/ivoyager_assets-2020-05-28.zip)
 
 Notes:
 1. Translations are now loaded from Global.translations for two reasons: a) so extensions can add w/out access to project.godot and b) for unicode support using \uHHHH escape code. If you're updating ivoyager submodule only, you should delete all localization files in the editor (i.e., from project.godot). Add them to Global.translations, via extension code at extension_init(), and reimport text.csv files with compress OFF (compress OFF required for unicode support; it may allow other modifications in the future).
@@ -15,6 +15,8 @@ Notes:
 * Changed .gitignore to allow tracking of export_presets.cfg in the project directories.
 * HTML5 export projects close their own browser window on quitting.
 * Improved Planetarium GUI response to window resizing.
+* GUI "locks" moved to options area (lower-right) in Planetarium.
+* Better sun "slice" image in the navigator panel.
 
 ## API-breaking changes
 * Removed gui_planetarium from ivoyager submodule. The planetarium extension project now contains its own GUI.
@@ -22,3 +24,5 @@ Notes:
 ## Bug fixes
 * [Assets hotfix 0.0.6a] Resized images that weren't a power-of-2 size (throws errors in HTML5 builds).
 * [Assets hotfix 0.0.6a] Fixed some import settings: flags/srgb ON for 3D assets, OFF for 2D; Mipmaps ON for everything (was off for 2D).
+* Fixed stray node after opening Credits.
+* Fixes for fullscreen toggle in Planetarium (HTML5 projects)
