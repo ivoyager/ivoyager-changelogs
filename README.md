@@ -1,5 +1,5 @@
 # _master_ branch
-Godot version: **3.2.1**
+Godot version: **3.2.1** (3.2.2 and 3.2.3rc1 don't work with I, Voyager! I'm troubleshooting this now.)
 
 Requires: **ivoyager_assets-2020-05-28**: [download here](https://github.com/ivoyager/changelogs/releases/download/dev-assets/ivoyager_assets-2020-05-28.zip)
 
