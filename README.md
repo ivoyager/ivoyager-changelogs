@@ -3,8 +3,8 @@ Godot version: **3.2.3**
 
 Requires: **ivoyager_assets-2020-05-28**: [download here](https://github.com/ivoyager/changelogs/releases/download/dev-assets/ivoyager_assets-2020-05-28.zip)
 
-Note: The project took a bit of a hiatus in the second half of 2020. There are likely to be more than usual undocumented breaking changes.
-
+## General Update
+The project was on hiatus for much of the second half of 2020, but we are back for 2021! My near-term goal is to get v0.0.7 out in January. We are still in alpha so there are still breaking changes (probably some undocumented in the next version). I suspect that we will remain in "alpha" until Godot 4.0 release since that will create many more breaking changes. After 4.0, perhaps in mid-2021, when all is updated and working well again, we'll release our "beta" and then move on to official "1.0" release. Our API should be reasonably stable with the beta release.
 
 ## Added
 * Latitude & longitude GUI.
@@ -18,6 +18,7 @@ Note: The project took a bit of a hiatus in the second half of 2020. There are l
 * Improved Planetarium GUI response to window resizing.
 * GUI "locks" moved to options area (lower-right) in Planetarium.
 * Better sun "slice" image in the navigator panel.
+* GUI widgets (ivoyager/gui_widgets/) are much improved in their modularity. They should be mostly drag-and-drop into new GUI scene trees (see example GUI in the Project Template).
 
 ## API-breaking changes
 * Removed gui_planetarium from ivoyager submodule. The planetarium extension project now contains its own GUI.
