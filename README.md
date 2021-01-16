@@ -13,9 +13,8 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 * Planetarium GUI panels can be dragged & resized (using new widget WinMgrDynamic).
 
 ## Changes
-* **Huge improvements to GUI modularity.** I, Voyager GUI widgets can be easily dropped into custom GUI scene trees. Widgets include labels (e.g., camera range, selection image) and controls (e.g., game speed buttons, the system navigator with planets and major moons) that plug into I, Voyager core systems, and also manager modules that control panel size (integrating with Options/GUI size) or providing draggability/resizeability.
+* **Huge improvements to GUI modularity!** I, Voyager GUI widgets can be easily dropped into custom GUI scene trees. Widgets include labels (e.g., camera range, selection image) and controls (e.g., game speed buttons, the system navigator with planets and major moons) that plug into I, Voyager core systems, and also manager modules that control panel size (integrating with Options/GUI size) or provide draggability/resizeability.
 * Totally overhauled GUI for both the simple game example (ivoyager/gui_example/example_game_gui.tcsn) and the Planetarium (planetarium/gui/pl_gui.tscn in the Planetarium repository).
-for a differently constructed GUI with draggable/resizable/hideable windows.
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
 * Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in data table files and localized text files. To make this work for localized text, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
 * Changed .gitignore to allow tracking of export_presets.cfg in the project directories.
@@ -26,7 +25,7 @@ for a differently constructed GUI with draggable/resizable/hideable windows.
 * Many class renamings.
 * Many existing GUI widgets were depreciated in favor of new, more modular widgets.
 * Simple example game GUI is now in directory ivoyager/gui_example/.
-* Removed gui_planetarium from ivoyager submodule. The planetarium extension project now contains its own GUI.
+* Removed gui_planetarium directory from ivoyager submodule. The planetarium extension project now contains its own GUI.
 
 ## Bug fixes
 * Fixed visibility issues related to recent Godot versions.
