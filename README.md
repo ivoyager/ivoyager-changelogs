@@ -11,6 +11,7 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 * Camera can track orbit (as before) or track ground (**new!**) or neither (camera stays fixed in space relative to its parent object).
 * Game GUI is properly resizable now with changes in Options/GUI size (using new widget WinMgrSimple).
 * Planetarium GUI panels can be dragged & resized (using new widget WinMgrDynamic).
+* Added hint tooltips on mouse-over for most buttons, checkboxes, etc.
 
 ## Changes
 * **Huge improvements to GUI modularity!** I, Voyager GUI widgets can be easily dropped into custom GUI scene trees. Widgets include labels (e.g., camera range, selection image) and controls (e.g., game speed buttons, the system navigator with planets and major moons) that plug into I, Voyager core systems, and also manager modules that control panel size (integrating with Options/GUI size) or provide draggability/resizeability.
