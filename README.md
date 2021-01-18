@@ -28,7 +28,7 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 ## API-breaking changes
 * Many class renamings.
 * Many existing GUI widgets were depreciated in favor of new, more modular widgets.
-* Simple example game GUI is now in directory ivoyager/gui_example/.
+* Game template example GUI is now in directory ivoyager/gui_example/.
 * Removed gui_planetarium directory from ivoyager submodule. The planetarium extension project now contains its own GUI.
 
 ## Bug fixes
