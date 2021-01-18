@@ -9,13 +9,16 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 ## Added
 * Latitude & longitude GUI.
 * Camera can track orbit (as before) or track ground (**new!**) or neither (camera stays fixed in space relative to its parent object).
-* Game GUI is properly resizable now with changes in Options/GUI size (using new widget WinMgrSimple).
-* Planetarium GUI panels can be dragged & resized (using new widget WinMgrDynamic).
+* Above the gui_widgets directory there is a new directory called gui_mods. This directory includes drag-and-drop components that modify GUI operation:
+   * ContainerSizedBySettings - This is added to the two PanelContainers in the GameExampleGUI and makes these resize when user changes GUI Size in Options.
+   * ContainerDynamic - Replaces above to make PanelContainers draggable and resizable (w/ resizing margins) by the user. Used in Planetarium.
+   * PanelVisOnMouseOverCkbx - Makes panel visible only when mouse is over or near it. A checkbox allows the user to lock it in visible state. Used in Planetarium.
+   * ProjectCyclablePanels - Allows a key to cycle-through panels, making them visible (if hidden due to mod above) and grabbing focus.
 * Added hint tooltips on mouse-over for most buttons, checkboxes, etc.
 
 ## Changes
-* **Huge improvements to GUI modularity!** I, Voyager GUI widgets can be easily dropped into custom GUI scene trees. Widgets include labels (e.g., camera range, selection image) and controls (e.g., game speed buttons, the system navigator with planets and major moons) that plug into I, Voyager core systems, and also manager modules that control panel size (integrating with Options/GUI size) or provide draggability/resizeability.
-* Totally overhauled GUI for both the simple game example (ivoyager/gui_example/example_game_gui.tcsn) and the Planetarium (planetarium/gui/pl_gui.tscn in the Planetarium repository).
+* **Huge improvements to GUI modularity!** I, Voyager GUI widgets can be easily dropped into custom GUI scene trees. Widgets include labels (e.g., camera range, selection image) and controls (e.g., game speed buttons, the system navigator with selectable planets and major moons) that plug into I, Voyager core systems.
+* Totally overhauled GUI for both the simple game example (ivoyager/gui_example/example_game_gui.tcsn) and the Planetarium (planetarium/gui/pl_gui.tscn in the Planetarium repository) using the new modular widgets and mods.
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
 * Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in data table files and localized text files. To make this work for localized text, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
 * Changed .gitignore to allow tracking of export_presets.cfg in the project directories.
