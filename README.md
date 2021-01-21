@@ -9,12 +9,12 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 ## Added
 * Latitude & longitude GUI.
 * Camera can track orbit (as before) or track ground (**new!**) or neither (camera stays fixed in space relative to its parent object).
-* Above the gui_widgets directory there is a new directory called gui_mods. This directory includes drag-and-drop components that modify GUI operation:
+* A new directory (ivoyager/gui_mods/) includes drag-and-drop components that modify GUI operation:
    * ContainerSizedBySettings - Can be added to a PanelContainer to provide resize when user changes Options/GUI Size. Used in Project Template.
    * ContainerDraggable - Replaces above; provides above function and makes panel draggable (has settable snap settings). Used in Planetarium.
    * ContainerDynamic - Replaces above; provides above function and makes panel user-resizable via margin drag.
    * PanelVisOnMouseOverCkbx - Makes panel visible only when mouse is over or near it. A checkbox allows the user to lock it in visible state. Used in Planetarium.
-   * ProjectCyclablePanels - Allows a key to cycle-through panels, making them visible (if hidden due to mod above) and grabbing focus. Used in Planetarium.
+   * ProjectCyclablePanels - Allows a key action to cycle-through panels, making them visible (if hidden due to mod above) and grabbing focus. Used in Planetarium.
 * Added hint tooltips on mouse-over for most buttons, checkboxes, etc.
 
 ## Changes
