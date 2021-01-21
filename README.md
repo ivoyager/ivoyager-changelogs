@@ -8,7 +8,7 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 
 ## Added
 * Latitude & longitude GUI.
-* Camera can track orbit (as before) or track ground (**new!**) or neither (camera stays fixed in space relative to its parent object). This is a super cool feature for observing Moon libration and Mercury's crazy terminator reversal!
+* Camera can track orbit (as before) or track ground (**new!**) or neither (camera stays fixed in space relative to its parent object). This is a super cool feature for observing our Moon's libration and Mercury's crazy terminator reversal!
 * A new directory (ivoyager/gui_mods/) includes drag-and-drop components that modify GUI operation:
    * ContainerSized - Can be added to a PanelContainer to provide resize when user changes Options/GUI Size. Used in Project Template.
    * ContainerDraggable - Replaces above; provides above function and makes panel draggable (has settable snap settings). Used in Planetarium.
