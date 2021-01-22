@@ -1,7 +1,7 @@
 # _master_ branch
 Godot version: **3.2.3**
 
-Requires: **ivoyager_assets-2020-05-28**: [download here](https://github.com/ivoyager/changelogs/releases/download/dev-assets/ivoyager_assets-2020-05-28.zip)
+Requires: **ivoyager_assets-0.0.7**: [download here](https://github.com/ivoyager/ivoyager/releases/tag/v0.0.7-alpha)
 
 ## General Update
 The project was on hiatus for much of the second half of 2020, but we are back for 2021! ~~My near-term goal is to get v0.0.7 out in January.~~done! We are in alpha so we still have many API breaking changes. I suspect that we will remain in "alpha" until Godot 4.0 release since that will create many more breaking changes. After 4.0, perhaps in mid- to late 2021, we'll release our "beta" and then move on to official "1.0" release. Our API should be reasonably stable with the beta release.
