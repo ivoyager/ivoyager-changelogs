@@ -15,11 +15,12 @@ The project was on hiatus for much of the second half of 2020, but we are back f
    * ContainerDynamic - Replaces above; provides above function and makes panel user-resizable via margin drag.
    * PanelLockVisibleCkbx - Allows panel to hide when mouse is not over or near it. A checkbox allows the user to lock it in visible state. Used in Planetarium.
    * ProjectCyclablePanels - Allows a key action to cycle-through panels, making them visible (if hidden due to mod above) and grabbing focus. Used in Planetarium.
+* Many new GUI widgets in ivoyager/gui_widgets/ directory. Names are mostly self-explanitory if you've used the Template Project and the Planetarium.
 * Added hint tooltips on mouse-over for most buttons, checkboxes, etc.
 
 ## Changes
-* **Huge improvements to GUI modularity!** I, Voyager GUI widgets can be easily dropped into custom GUI scene trees. Widgets include dynamic labels and textures (e.g., RangeLabel, DateTimeLabel, SelectionImage) and user controls (e.g., SpeedButtons, OrbitsNamesSymbolsCkbxs, PlanetMoonButtons) that plug into I, Voyager core systems.
-* Totally overhauled GUI for both the game template example (ivoyager/gui_example/example_game_gui.tcsn) and the Planetarium (planetarium/gui/pl_gui.tscn in the Planetarium repository) using the new modular widgets and mods.
+* **Huge improvements to GUI modularity!** I, Voyager GUI widgets are now drag-and-drop for building custom GUI scene trees. Widgets include dynamic labels and textures (e.g., RangeLabel, DateTimeLabel, SelectionImage) and user controls (e.g., SpeedButtons, OrbitsNamesSymbolsCkbxs, PlanetMoonButtons) that plug into I, Voyager core systems.
+* Overhauled GUI for both the game template example (ivoyager/gui_example/example_game_gui.tcsn) and the Planetarium (planetarium/gui/pl_gui.tscn in the Planetarium repository) using the new modular widgets and mods.
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
 * Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in data table files and localized text files. To make this work for localized text, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
 * Changed .gitignore to allow tracking of export_presets.cfg in the project directories.
