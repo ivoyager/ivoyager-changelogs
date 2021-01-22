@@ -1,10 +1,10 @@
 # v0.0.7 (current _master_ branch)
-Godot version: **3.2.3**
+Developed using Godot **3.2.3** (not yet tested in 3.2.4 betas)
 
 Requires: **ivoyager_assets-0.0.7**: [download here](https://github.com/ivoyager/ivoyager/releases/tag/v0.0.7-alpha)
 
 ## General Update
-The project was on hiatus for much of the second half of 2020, but we are back for 2021! The project remains in "alpha" so expect many API breaking changes (although I try to document those here). I suspect that we will remain in alpha until Godot 4.0 release. After that, perhaps in mid- to late 2021, we'll release our "beta" and then move on to official "1.0" release. Our API should be reasonably stable with the beta release.
+The project was on hiatus for much of the second half of 2020, but we are back for 2021! We remain in "alpha" so expect many API breaking changes (although I try to document those here). I suspect that will be the case until Godot 4.0 release. After that, perhaps in mid- to late 2021, we'll release our "beta" and then move on to official "1.0" release. Our API should be reasonably stable with the beta release.
 
 ## Added
 * Latitude & longitude GUI.
