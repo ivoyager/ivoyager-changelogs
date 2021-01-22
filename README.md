@@ -4,7 +4,7 @@ Godot version: **3.2.3**
 Requires: **ivoyager_assets-2020-05-28**: [download here](https://github.com/ivoyager/changelogs/releases/download/dev-assets/ivoyager_assets-2020-05-28.zip)
 
 ## General Update
-The project was on hiatus for much of the second half of 2020, but we are back for 2021! My near-term goal is to get v0.0.7 out in January. We are in alpha so we still have many API breaking changes. I suspect that we will remain in "alpha" until Godot 4.0 release since that will create many more breaking changes. After 4.0, perhaps in mid- to late 2021, we'll release our "beta" and then move on to official "1.0" release. Our API should be reasonably stable with the beta release.
+The project was on hiatus for much of the second half of 2020, but we are back for 2021! ~~My near-term goal is to get v0.0.7 out in January.~~done! We are in alpha so we still have many API breaking changes. I suspect that we will remain in "alpha" until Godot 4.0 release since that will create many more breaking changes. After 4.0, perhaps in mid- to late 2021, we'll release our "beta" and then move on to official "1.0" release. Our API should be reasonably stable with the beta release.
 
 ## Added
 * Latitude & longitude GUI.
@@ -23,9 +23,7 @@ The project was on hiatus for much of the second half of 2020, but we are back f
 * Overhauled GUI for both the game template example (ivoyager/gui_example/example_game_gui.tcsn) and the Planetarium (planetarium/gui/pl_gui.tscn in the Planetarium repository) using the new modular widgets and mods.
 * Translations are loaded from Global.translations so extensions can add w/out access to project.godot.
 * Unicode escape using \uHHHH (where HHHH is a hexidecimal value) can now be used in data table files and localized text files. To make this work for localized text, text.csv files must be reimported with compress OFF. (This is a GDScript patch until Godot issue [#38716](https://github.com/godotengine/godot/issues/38716) gets fixed.)
-* Changed .gitignore to allow tracking of export_presets.cfg in the project directories.
-* HTML5 export projects close their own browser window on quitting.
-* Better sun "slice" image in the navigator panel.
+* Improvements to graphics and graphic import settings.
 
 ## API-breaking changes
 * Many class renamings.
