@@ -6,13 +6,10 @@ Requires: **ivoyager_assets-0.0.7**: [download here](https://github.com/ivoyager
 Not much here yet! See recent changes in v0.0.7.md above.
 
 ## Added
-*
 
 ## Changes
 * Updates to README.md, LICENCE.txt, and export_presets.cfg.
 
 ## API-breaking changes
-* 
 
 ## Bug fixes
-* 
