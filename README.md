@@ -1,4 +1,4 @@
-# Current _master_ branch
+# Current _master_ branch (v0.0.8-dev)
 Under development using Godot **3.2.3** (not yet tested in 3.2.4 betas)
 
 Requires: **ivoyager_assets-0.0.7**: [download here](https://github.com/ivoyager/downloads/releases/tag/v0.0.7-alpha)
