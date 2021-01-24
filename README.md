@@ -5,7 +5,7 @@ Requires: **ivoyager_assets-0.0.7**: [download here](https://github.com/ivoyager
 
 Not much here yet! See recent changes in v0.0.7.md above.
 
-**Repository name changes!** I changed the names of two repositories removing the "ivoyager_" prefix from "planetarium" and "project_template". According to GitHub, the old URLs will continue to work so nothing should break. But you might want to update your fork and local repository names (and Git remotes) for consistency. 
+**Repository name changes!** I changed the names of two repositories removing the "ivoyager_" prefix from "planetarium" and "project_template". The old URLs will continue to work so nothing should break. But you might want to update your fork and local repository names (and Git remotes) for consistency. 
 
 ## Added
 
