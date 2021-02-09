@@ -28,5 +28,6 @@ See other recent changes in v0.0.7.md above!
     * Registrar -> BodyRegistry
     * HUD2dSurface -> ProjectionSurface
 * Overhauled Timekeeper API to more correctly use Julian Day Number, Julian Day, UT, etc.
+* ContainerSized, ContainerDraggable & ContainerDynamic generalized to modify Control parent and renamed ControlSized, ControlDraggable & ControlDynamic
 
 ## Bug fixes
