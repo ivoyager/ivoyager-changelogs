@@ -13,12 +13,13 @@ See other recent changes in v0.0.7.md above!
 * New MDFileLabel widget can read an .md file and convert (some) markdown codes to BBCode. It's narrowly coded now to read ivoyager/CREDITS.md for in-app display, but it could be improved to read more markdown codes.
 * Added mouse-cursor-shape feedback (pointy finger, etc.) for main 3d screen selectables and some GUI elements.
 * Hints for all GUI input controls.
+* Added time setting functionality in Planetarium (using TimeSetPopup + TimeSetter widget in core ivoyager).
 
 ## Changes
 * Updates to README.md, CREDITS.md, LICENCE.txt, and export_presets.cfg.
 * Standardized useage of NAN to mean missing or not applicable (don't display) and INF to mean applicable but unknown (display as "?"). This affects return of TableReader functions for float values.
 * TranslationImporter reports duplicate text keys.
-* Improved 3d body mouse-click selection and screen drags. These functions now happen in ProjectionSurface (removed obsolete MouseClickSelector). 
+* Improved 3d body mouse-click selection and screen drags. These functions now happen in ProjectionSurface (removed obsolete MouseClickSelector).
 
 ## API-breaking changes
 * Debug is no longer a singleton node! It's now a static Reference class. This must be updated in your project.godot file, or Editor/settings/autoload, if you use ivoyager submodule in your own project! (Also removed Debug functions that probably weren't used by anyone.)
@@ -26,5 +27,6 @@ See other recent changes in v0.0.7.md above!
 * Class renames:
     * Registrar -> BodyRegistry
     * HUD2dSurface -> ProjectionSurface
+* Overhauled Timekeeper API to more correctly use Julian Day Number, Julian Day, UT, etc.
 
 ## Bug fixes
