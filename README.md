@@ -31,4 +31,4 @@ See other recent changes in v0.0.7.md above!
 * ContainerSized, ContainerDraggable & ContainerDynamic generalized to modify Control parent and renamed ControlSized, ControlDraggable & ControlDynamic
 
 ## Bug fixes
-* Fixed bug preventing hotkey from being removed (when not replaced)
+* Fixed bug preventing hotkey action from being removed from InputMap (when not replaced)
