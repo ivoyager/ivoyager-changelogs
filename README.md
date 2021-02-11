@@ -9,7 +9,7 @@ See download instructions and links [here](https://ivoyager.dev/download/).
 
 ## Added
 * Network sync capability added in StateManager, Timekeeper and Body for multiplayer support. (Note: We won't have a NetworkLobby in core ivoyager, since that is very application-specific. But core will have signals and rpc calls to keep a network game synched on the solar system side.)
-* Added [Scheduler](https://github.com/ivoyager/ivoyager/blob/master/prog_refs/scheduler.gd). This allows you to easily connect to interval signals based on simulator time (based on any or as many intervals as you need). I, Voyager uses this to update Orbit based on element rates (precessions, etc.).
+* Added [Scheduler](https://github.com/ivoyager/ivoyager/blob/master/prog_refs/scheduler.gd). This allows you to easily connect to signals that fire on simulator time intervals (which function caller can specify). I, Voyager uses this to update Orbit instances based on evolving orbital elements (precessions, etc.).
 * New MDFileLabel widget can read an .md file and convert (some) markdown codes to BBCode. It's narrowly coded now to read ivoyager/CREDITS.md for in-app display, but it could be improved to read more markdown codes.
 * Added mouse-cursor-shape feedback (pointy finger, etc.) for main 3d screen selectables and some GUI elements.
 * Hints for all GUI input controls.
