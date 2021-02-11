@@ -5,7 +5,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager release
 
 See download instructions and links [here](https://ivoyager.dev/download/). 
 
-**Repository name changes!** I changed the names of two repositories, shortening to just "planetarium" and "project_template". The old URLs will continue to work so nothing should break. But you might want to update your fork and local repository names (and Git remotes) for consistency. 
+**Repository changes!** I changed the names of the two "project" repositories, shortening to just "planetarium" and "project_template". The old URLs will continue to work so nothing should break. I deleated both the "issues" and "downloads" repositories. Issues and downloads are now found in their respective project or submodule repositories, although the vast majority of issues will involve the submodule [here](https://github.com/ivoyager/ivoyager/issues).
 
 ## Added
 * Network sync capability added in StateManager, Timekeeper and Body for multiplayer support. (Note: We won't have a NetworkLobby in core ivoyager, since that is very application-specific. But core will have signals and rpc calls to keep a network game synched on the solar system side.)
