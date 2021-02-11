@@ -31,4 +31,4 @@ See download instructions and links [here](https://ivoyager.dev/download/).
 * ContainerSized, ContainerDraggable & ContainerDynamic generalized to modify Control parent and renamed ControlSized, ControlDraggable & ControlDynamic
 
 ## Bug fixes
-* Fixed bug preventing hotkey action from being removed from InputMap (when not replaced)
+* Fixed bug preventing hotkey action removal (when not replaced)
