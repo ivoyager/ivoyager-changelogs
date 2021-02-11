@@ -3,7 +3,7 @@ Developed using Godot **3.2.3** (tested & seems ok in 3.2.4-rc1)
 
 Requires: **ivoyager_assets-0.0.7**: [download here](https://github.com/ivoyager/downloads/releases/tag/v0.0.7-alpha)
 
-See other recent changes in v0.0.7.md above!
+See download instructions and links [here](https://ivoyager.dev/download/).
 
 **Repository name changes!** I changed the names of two repositories, shortening to just "planetarium" and "project_template". The old URLs will continue to work so nothing should break. But you might want to update your fork and local repository names (and Git remotes) for consistency. 
 
