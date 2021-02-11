@@ -3,7 +3,7 @@ Developed using **Godot 3.2.3** (tested & seems ok in 3.2.4-rc1)
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
-See download instructions and links [here](https://ivoyager.dev/download/). 
+See cloning and downloading instructions [here](https://ivoyager.dev/download/). 
 
 **Repository changes!** I changed the names of the two "project" repositories, shortening to just "planetarium" and "project_template". The old URLs will continue to work so nothing should break. I deleated both the "issues" and "downloads" repositories (this was bad practice). Issues and downloads are now found in their respective project or submodule repositories, although the vast majority of issues will involve the submodule [here](https://github.com/ivoyager/ivoyager/issues).
 
