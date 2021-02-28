@@ -15,7 +15,8 @@ See other recent changes in v0.0.8.md & v0.0.7.md.
 * Universe is now replaceable in ProjectBuilder.
 
 ## API-breaking changes
-*
+* Save/load related functions moved from StateManager to new SaveLoadManager.
+* Function name changes in StateManager: add_active_thread -> add_blocking_thread, remove_active_thread -> remove_blocking_thread.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
