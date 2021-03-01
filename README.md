@@ -6,7 +6,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager release
 See cloning and downloading instructions [here](https://ivoyager.dev/download/). 
 
 ## Project Note!
-* universe.tscn was moved from the ivoyager submodule into the top level project directories. This will help external project developers, but it will break existing projects. Universe is just a Spatial that has name="Universe" and no other changes. (But I may add WorldEnvironment to it. That's currently done by code.)
+* universe.tscn was moved from the ivoyager submodule into the top level project directories. This will help external project developers, but break existing projects. Universe is just a Spatial that has name="Universe" and no other changes. (But I may add WorldEnvironment to it. That's currently done by code.)
 
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions work on the Main thread if external project sets Global.enable_threads = false. Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0. (Note: progress bar does not progress in most cases if enable_threads = false. I removed it in the Web Planetarium.)
