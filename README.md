@@ -12,12 +12,15 @@ See other recent changes in v0.0.8.md & v0.0.7.md.
 * Many new "something_requested" signals in Global. These can be used in lieu of direct calls to most functions in StateManager and SaveLoadManager (and others). 
 
 ## Changes
-* We now have a dedicated I/O thread that does all resource loading and other I/O-adjacent tasks (such as building much of the solar system before attachment to the scene tree). Our solar system build was already fast but it's now blazingly fast! Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0.
+* We now have a dedicated I/O thread that does all resource loading and other I/O-adjacent tasks, such as building much of the solar system before attachment to the scene tree. Our solar system build was already fast but it's now blazingly fast! Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0.
 * Universe is now replaceable in ProjectBuilder.
+* Better feedback from save/load system for checking game-state consistency.
 
 ## API-breaking changes
-* Save/load related functions moved from StateManager to new SaveLoadManager.
-* Function name changes in StateManager: add_active_thread -> add_blocking_thread, remove_active_thread -> remove_blocking_thread.
+* Save/load related functions moved from StateManager to new SaveManager.
+* Function name changes in StateManager.
+* Renamed SaverLoader -> SaveBuilder. API is completely different.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
+* Fixed GUI widget that was proliferating Labels on each game load without clearing.
