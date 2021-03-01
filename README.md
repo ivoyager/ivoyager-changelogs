@@ -24,4 +24,4 @@ See other recent changes in v0.0.8.md & v0.0.7.md.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
-* Fixed GUI widget that was proliferating Labels on each game load without clearing.
+* Fixed bug in SelectionData widget that allowed it to proliferate Labels on each game load without clearing.
