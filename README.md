@@ -9,7 +9,7 @@ See other recent changes in v0.0.8.md & v0.0.7.md.
 
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and cache writing. Use IOManager.callback(object, io_method, finish_method, array) to get a callback on the I/O thread (for I/O or "I/O-adjacent" tasks such as resource loading and building parts of scene trees) and a subsequent callback on the Main thread (e.g., to attach results of previous work to the Scene Tree). If you set Global.enable_threads = false, everything still works but all on the Main thread.
-* Many new "something_requested" signals in Global. These can be used in lieu of direct calls to most functions in StateManager and SaveLoadManager (and others). 
+* Many new "something_requested" signals in Global. These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others). 
 
 ## Changes
 * We now have a dedicated I/O thread that does all resource loading and other I/O-adjacent tasks, such as building much of the solar system before attachment to the scene tree. Our solar system build was already fast but it's now blazingly fast! Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0.
