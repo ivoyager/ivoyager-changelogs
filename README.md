@@ -8,11 +8,10 @@ See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 See other recent changes in v0.0.8.md & v0.0.7.md.
 
 ## Added
-* New IOManager manages a separate thread for I/O including resource loading and cache writing. Use IOManager.callback(object, io_method, finish_method, array) to get a callback on the I/O thread (for I/O or "I/O-adjacent" tasks such as resource loading and building parts of scene trees) and a subsequent callback on the Main thread (e.g., to attach results of previous work to the Scene Tree). If you set Global.enable_threads = false, everything still works but all on the Main thread.
+* New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions work on the Main thread if external project sets Global.enable_threads = false. Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0. (Note: progress bar does not progress in most cases if enable_threads = false. I removed it in the Web Planetarium.)
 * Many new "something_requested" signals in Global. These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others). 
 
 ## Changes
-* We now have a dedicated I/O thread that does all resource loading and other I/O-adjacent tasks, such as building much of the solar system before attachment to the scene tree. Our solar system build was already fast but it's now blazingly fast! Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0.
 * Universe is now replaceable in ProjectBuilder.
 * Better feedback from save/load system for checking game-state consistency.
 * "Program nodes" are now children of Universe rather than Global. All nodes with persist data are now under Universe, which helps with recent save/load changes.
@@ -21,7 +20,7 @@ See other recent changes in v0.0.8.md & v0.0.7.md.
 ## API-breaking changes
 * Save/load related functions moved from StateManager to new SaveManager.
 * Function name changes in StateManager.
-* Renamed SaverLoader -> SaveBuilder. API is completely different.
+* Renamed SaverLoader -> SaveBuilder, and changed API substantially.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
