@@ -1,4 +1,4 @@
-# current _master_ branch
+# current _master_ branch (v0.0.9-dev)
 Developed using **Godot 3.2.3** (ok in 3.2.4-rc1; there is a lighting problem in -rc2 that has been reported and fixed, so waiting to test -rc3)
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
