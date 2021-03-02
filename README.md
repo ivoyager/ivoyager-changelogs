@@ -6,7 +6,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager release
 See cloning and downloading instructions [here](https://ivoyager.dev/download/). 
 
 ## Project Note!
-* universe.tscn was moved from the ivoyager submodule into the top level project directories. This will help external project developers. However, it'll break existing projects using ivoyager until you add your own Universe. It's just a Spatial that has name="Universe" and no other changes. (I'm not sure yet but I may add WorldEnvironment to it. That's currently done by code.)
+* universe.tscn was moved from the ivoyager submodule into the top level project directories. This will help external project developers. However, it'll break existing projects using ivoyager until you add your own Universe. It's just a Spatial that has name="Universe" and no other changes.
 
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions work on the Main thread if external project sets Global.enable_threads = false. Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0. (Note: progress bar does not progress in most cases if enable_threads = false. I removed it in the Web Planetarium.)
@@ -18,7 +18,7 @@ See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 * "Program nodes" are now children of Universe rather than Global. All nodes with persist data are now under Universe, which helps with recent save/load changes.
 * Removed Universe GDScript that didn't do anything.
 * Non-HTML5 Planetarium now has a boot screen.
-* Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for developer projects.
+* Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
 
 ## API-breaking changes
 * Save/load related functions moved from StateManager to new SaveManager.
