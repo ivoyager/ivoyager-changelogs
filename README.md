@@ -17,11 +17,15 @@ See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 * Better feedback from save/load system for checking game-state consistency.
 * "Program nodes" are now children of Universe rather than Global. All nodes with persist data are now under Universe, which helps with recent save/load changes.
 * Removed Universe GDScript that didn't do anything.
+* Non-HTML5 Planetarium now has a boot screen.
+* Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for developer projects.
 
 ## API-breaking changes
 * Save/load related functions moved from StateManager to new SaveManager.
 * Function name changes in StateManager.
 * Renamed SaverLoader -> SaveBuilder, and changed API substantially.
+* Moved init related signals from ProjectBuilder to Global.
+* Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
