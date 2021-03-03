@@ -26,6 +26,7 @@ See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 * Renamed SaverLoader -> SaveBuilder, and changed API substantially.
 * Moved init related signals from ProjectBuilder to Global.
 * Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
+* Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
