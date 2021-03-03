@@ -19,6 +19,7 @@ See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 * Removed Universe GDScript that didn't do anything.
 * Non-HTML5 Planetarium now has a boot screen.
 * Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
+* Much smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
 
 ## API-breaking changes
 * Save/load related functions moved from StateManager to new SaveManager.
