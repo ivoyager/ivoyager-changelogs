@@ -7,8 +7,8 @@ See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 
 ## Project Changes
 These will break external projects using ivoyager submodule! Make changes as needed.
-* The Universe node was moved from the ivoyager submodule to the top level project directory. This allows external project to add scenes to the simulator root node.
-* [universe.gd](https://github.com/ivoyager/project_template/blob/master/universe.gd) now has the constants that define base SI units. This allows external project to change simulator internal representation of values. In particular, constant METER determimes the scale of the simulation.
+* The Universe node was moved from the ivoyager submodule to the top level project directory. External projects can now add scenes to the simulator root node in the editor (before you could do this only by code).
+* [universe.gd](https://github.com/ivoyager/project_template/blob/master/universe.gd) now has the constants that define base SI units. By "externalizing" this, external projects can now change simulator internal representation of values. In particular, constant METER determimes the scale of the simulation.
 
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions work on the Main thread if external project sets Global.enable_threads = false. Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0. (Note: progress bar does not progress in most cases if enable_threads = false. I removed it in the Web Planetarium.)
