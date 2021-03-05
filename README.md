@@ -24,9 +24,13 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Much smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
 
 ## API-breaking changes
-* Save/load related functions moved from StateManager to new SaveManager.
+* Class renamings:
+    * QtyStrings -> QtyTxtConverter
+    * ModelGeometry -> ModelController
+    * Properties -> BodyProperties
+    * SaverLoader -> SaveBuilder (also changed API substantially)
+* Class split: new SaveManager has save/load related functions previously in StateManager.
 * Function name changes in StateManager.
-* Renamed SaverLoader -> SaveBuilder, and changed API substantially.
 * Moved init related signals from ProjectBuilder to Global.
 * Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
 * Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`. (Note: subclasses can override, unlike Godot virtual functions.)
