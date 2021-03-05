@@ -29,7 +29,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Renamed SaverLoader -> SaveBuilder, and changed API substantially.
 * Moved init related signals from ProjectBuilder to Global.
 * Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
-* Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`.
+* Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`. (Note: subclasses can override, unlike Godot virtual functions.)
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
