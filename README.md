@@ -22,7 +22,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Non-HTML5 Planetarium now has a boot screen.
 * Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
 * Much smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
-* Improved and more complete API in the Body class.
+* Improvements to [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) class API.
 
 ## API-breaking changes
 * Class renamings:
