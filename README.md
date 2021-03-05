@@ -18,7 +18,6 @@ These will break external projects using the ivoyager submodule! Make changes as
 * Universe is now replaceable in ProjectBuilder.
 * Better feedback from save/load system for checking game-state consistency.
 * "Program nodes" are now children of Universe rather than Global. All nodes with persist data are now under Universe, which helps with recent save/load changes.
-* Removed Universe GDScript that didn't do anything.
 * Non-HTML5 Planetarium now has a boot screen.
 * Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
 * Much smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
