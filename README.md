@@ -6,7 +6,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager release
 See cloning and downloading instructions [here](https://ivoyager.dev/download/). 
 
 ## Project Changes
-These will break external projects using ivoyager submodule! Make changes as needed.
+These will break external projects using the ivoyager submodule! Make changes as needed.
 * The Universe node was moved from the ivoyager submodule to the top level project directory. External projects can now add scenes to the simulator root node in the editor (before you could do this only by code).
 * [universe.gd](https://github.com/ivoyager/project_template/blob/master/universe.gd) now has the constants that define base SI units. By "externalizing" this, external projects can now change simulator internal representation of values. In particular, constant METER determimes the scale of the simulation.
 
