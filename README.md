@@ -16,7 +16,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Many new "something_requested" signals in Global. These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others). 
 
 ## Changes
-* Universe is now replaceable in ProjectBuilder.
+* External project can set root node of the simulation by setting ProjectBuilder property "universe".
 * Better feedback from save/load system for checking game-state consistency.
 * "Program nodes" are now children of Universe rather than Global. All nodes with persist data are now under Universe, which helps with recent save/load changes.
 * Non-HTML5 Planetarium now has a boot screen.
