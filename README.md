@@ -13,7 +13,8 @@ The first two will break external projects using the ivoyager submodule! Make ch
 
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions work on the Main thread if external project sets Global.enable_threads = false. Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0. (Note: progress bar does not progress in most cases if enable_threads = false. I removed it in the Web Planetarium.)
-* Many new "something_requested" signals in Global. These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others). 
+* Many new "something_requested" signals in [Global](https://github.com/ivoyager/ivoyager/blob/master/singletons/global.gd). These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others).
+* Expanded API in the [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) class.
 
 ## Changes
 * External project can set root node of the simulation by setting ProjectBuilder property "universe".
@@ -21,8 +22,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * "Program nodes" are now children of Universe rather than Global. All nodes with persist data are now under Universe, which helps with recent save/load changes.
 * Non-HTML5 Planetarium now has a boot screen.
 * Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
-* Much smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
-* Improvements to [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) class API.
+* Smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
 
 ## API-breaking changes
 * Class renamings:
@@ -35,6 +35,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Moved init related signals from ProjectBuilder to Global.
 * Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
 * Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`. (Note: subclasses can override, unlike Godot virtual functions.)
+* Changes in TableReader "build_" function signatures. Also renamed "conv_" functions to "convert_".
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
