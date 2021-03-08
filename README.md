@@ -15,7 +15,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions work on the Main thread if external project sets Global.enable_threads = false. Unfortunately, we won't be able to use threads for the Web Planetarium until Godot 4.0. (Note: progress bar does not progress in most cases if enable_threads = false. I removed it in the Web Planetarium.)
 * Many new "something_requested" signals in [Global](https://github.com/ivoyager/ivoyager/blob/master/singletons/global.gd). These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others).
 * Expanded API in the [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) class.
-* Greatly expanded data display for Sun, planets and moons, with closeable sections "Orbital Characteristics", "Physical Characteristics", "Atmosphere" (following Wikipedia format). This involved a rebuild of SelectionData widget and more content in the data tables.
+* Greatly expanded data display for Sun, planets and moons, with closeable sections "Orbital Characteristics", "Physical Characteristics" and "Atmosphere" (following Wikipedia format). Data to display can be modified by external project. This involved a rebuild of SelectionData widget and more content in the data tables.
 
 ## Changes
 * External project can set root node of the simulation by setting ProjectBuilder property "universe".
