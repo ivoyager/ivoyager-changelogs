@@ -15,7 +15,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions are called on the Main thread if external project sets Global.enable_threads = false.
 * Many new "something_requested" signals in [Global](https://github.com/ivoyager/ivoyager/blob/master/singletons/global.gd). These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others).
 * Expanded API in [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) and [Orbit](https://github.com/ivoyager/ivoyager/blob/master/tree_refs/orbit.gd) classes.
-* Expanded data display for Sun, planets and moons, with closeable sections and subsections. Display content can be modified by external project.
+* Expanded data display for Sun, planets and moons, with closeable sections and subsections (display content can be modified by external project).
 * Added new Composition object. The new Body.components dictionary can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
 
 ## Changes
