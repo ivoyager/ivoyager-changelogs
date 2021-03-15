@@ -14,8 +14,8 @@ The first two will break external projects using the ivoyager submodule! Make ch
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions are called on the Main thread if external project sets Global.enable_threads = false.
 * Many new "something_requested" signals in [Global](https://github.com/ivoyager/ivoyager/blob/master/singletons/global.gd). These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others).
-* Expanded API in the [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) class.
-* Greatly expanded data display for Sun, planets and moons, with closeable sections and subsections. Display content can be modified by external project.
+* Expanded API in [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) and [Orbit](https://github.com/ivoyager/ivoyager/blob/master/tree_refs/orbit.gd) classes.
+* Expanded data display for Sun, planets and moons, with closeable sections and subsections. Display content can be modified by external project.
 * Added new Composition object. BodyCharacteristics can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
 
 ## Changes
@@ -25,21 +25,25 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Non-HTML5 Planetarium now has a boot screen.
 * Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
 * Smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
+* Body object reorganized with most properties moved to "characteristics" dictionary (for non-object properties) or "components" dictionary (for objects).
+* Improvements to SaveBuilder encoding of objects; SaveBuilder optimizations.
 
 ## API-breaking changes
 * Class renamings:
     * QtyStrings -> QtyTxtConverter
     * ModelGeometry -> ModelController (maintains data related to body orientation in space)
-    * Properties -> BodyCharacteristics (this has both "physical characteristics" & "atmosphere" data)
     * SaverLoader -> SaveBuilder (also changed API substantially)
 * Class split: new SaveManager has save/load related functions previously in StateManager.
+* Removed class "Properties" (was subsequently renamed "BodyCharacteristics" before removal)
+* Many Body properties were moved into Body.characteristics dictionary.
 * Function name changes in StateManager.
 * Moved init related signals from ProjectBuilder to Global.
 * Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
 * Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`. (Note: subclasses can override, unlike Godot virtual functions.)
-* Changes in TableReader "build_" function signatures. Also renamed "conv_" functions to "convert_".
+* Changes in TableReader "build_" function signatures; renamed "conv_" functions to "convert_".
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
 * Fixed bug in SelectionData widget that allowed it to proliferate Labels on each game load without clearing.
 * Fixed "?" display for moon masses.
+* Fixed bug preventing "Top" view from showing whole system.
