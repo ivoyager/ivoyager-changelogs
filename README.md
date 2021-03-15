@@ -16,7 +16,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Many new "something_requested" signals in [Global](https://github.com/ivoyager/ivoyager/blob/master/singletons/global.gd). These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others).
 * Expanded API in [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) and [Orbit](https://github.com/ivoyager/ivoyager/blob/master/tree_refs/orbit.gd) classes.
 * Expanded data display for Sun, planets and moons, with closeable sections and subsections. Display content can be modified by external project.
-* Added new Composition object. BodyCharacteristics can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
+* Added new Composition object. The new Body.components dictionary can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
 
 ## Changes
 * External project can set root node of the simulation by setting ProjectBuilder property "universe".
@@ -25,7 +25,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Non-HTML5 Planetarium now has a boot screen.
 * Moved pale_blue_dot.png to project directory level. It's boot image for our projects, but now easier to remove for external project developers.
 * Smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
-* Body object reorganized with most properties moved to "characteristics" dictionary (for non-object properties) or "components" dictionary (for objects).
+* Body object reorganized with most properties moved to new "characteristics" dictionary (for non-object properties) or "components" dictionary (for objects).
 * Improvements to SaveBuilder encoding of objects; SaveBuilder optimizations.
 
 ## API-breaking changes
