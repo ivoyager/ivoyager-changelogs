@@ -1,7 +1,7 @@
 # current _master_ branch (v0.0.9-dev)
-Currently developing using **Godot 3.2.3**; 3.2.4-rc5 works in editor mode but exports fail due to [this issue](https://github.com/godotengine/godot/issues/47061).
+Currently developing using **Godot 3.2.3** (3.2.4-rc5 works in editor mode but exports fail due to [this issue](https://github.com/godotengine/godot/issues/47061)).
 
-Requires non-Git-tracked **ivoyager_assets-0.0.7**; find it in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
+Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
 See cloning and downloading instructions [here](https://ivoyager.dev/download/). 
 
