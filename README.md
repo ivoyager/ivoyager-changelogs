@@ -1,5 +1,5 @@
-# current _master_ branch (v0.0.9-dev)
-Currently developing using [**Godot 3.3-rc6**](https://godotengine.org/article/release-candidate-godot-3-3-rc-6).
+# Current _master_ branch (v0.0.9-dev)
+Under development using [**Godot 3.3-rc6**](https://godotengine.org/article/release-candidate-godot-3-3-rc-6).
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
