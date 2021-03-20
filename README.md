@@ -48,4 +48,4 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Fixed bug in SelectionData widget that allowed it to proliferate Labels on each game load without clearing.
 * Fixed "?" display for moon masses.
 * Fixed bug preventing "Top" view from showing whole system.
-* Various erros in Body and Orbit get functions found and fixed while expanding data display.
+* Various get function errors in Body and Orbit were identified and fixed while expanding data display.
