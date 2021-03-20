@@ -10,6 +10,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * [project breaking!] The Universe node was moved from the ivoyager submodule to the top level project directory. External projects can now add scenes to the simulator root node in the editor (before you could do this only by code).
 * [project breaking!] [universe.gd](https://github.com/ivoyager/project_template/blob/master/universe.gd) now has the constants that define base SI units. By "externalizing" this, external projects can now change simulator internal representation of values (in particular, METER, which sets the scale of the simulation).
 * We are no longer maintaining a "web-deployment" branch for the Planetarium. Instead, the master branch *is* the web deployment (e.g., it uses GLES2). Basically, our [Web Planetarium](https://www.ivoyager.dev/planetarium/) has become our main "product." You can still switch to GLES3 and export a functioning Windows app.
+* Solar system data tables are now tab delineated .tsv files rather than .csv. The switch was needed for [this](https://github.com/godotengine/godot/issues/47061) Godot issue, but it's a good switch anyway. Tabs are easy to add within a cell using "\t", so we no longer need quote-enclosed cells to deal with our delineator.
 
 ## Added
 * New IOManager manages a separate thread for I/O including resource loading and other file reading/writing. All functions are called on the Main thread if external project sets Global.enable_threads = false.
@@ -47,3 +48,4 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Fixed bug in SelectionData widget that allowed it to proliferate Labels on each game load without clearing.
 * Fixed "?" display for moon masses.
 * Fixed bug preventing "Top" view from showing whole system.
+* Various erros in Body and Orbit get functions found and fixed while expanding data display.
