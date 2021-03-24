@@ -36,7 +36,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
     * ModelGeometry -> ModelController (maintains data related to body orientation in space)
     * SaverLoader -> SaveBuilder (also changed API substantially)
 * Class split: new SaveManager has save/load related functions previously in StateManager.
-* Removed class "Properties" (was subsequently renamed "BodyCharacteristics" before removal)
+* Removed class "Properties" (was subsequently renamed "BodyCharacteristics" before removal). Replaced by Body.characteristics dictionary.
 * Many Body properties were moved into Body.characteristics dictionary.
 * Function name changes in StateManager.
 * Moved init related signals from ProjectBuilder to Global.
@@ -50,3 +50,5 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Fixed "?" display for moon masses.
 * Fixed bug preventing "Top" view from showing whole system.
 * Various get function errors in Body and Orbit were identified and fixed while expanding data display.
+* Fixed lat/long display bugs.
+* Fixed various problems related to retrograde orbit or rotation.
