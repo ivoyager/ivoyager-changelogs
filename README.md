@@ -1,5 +1,5 @@
 # Current _master_ branch (v0.0.9-dev)
-Under development using [**Godot 3.3-rc6**](https://godotengine.org/article/release-candidate-godot-3-3-rc-6). Note: For asteroids to work in Godot 3.3-rc6 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9.
+Under development using [**Godot 3.3-rc6**](https://godotengine.org/article/release-candidate-godot-3-3-rc-6). Note: For asteroids to work in Godot 3.3-rc6 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9. Also, HTML5 build does not currently work when placed on host server due to [this Godot issue](https://github.com/godotengine/godot/issues/47357). This is fixed for next Godot release.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -52,3 +52,4 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Various get function errors in Body and Orbit were identified and fixed while expanding data display.
 * Fixed lat/long display bugs.
 * Fixed various problems related to retrograde orbit or rotation.
+* Fixed some precision (significant digits) errors in data display.
