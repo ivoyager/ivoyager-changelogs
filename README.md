@@ -3,7 +3,9 @@ Under development using [**Godot 3.3-rc6**](https://godotengine.org/article/rele
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
-See cloning and downloading instructions [here](https://ivoyager.dev/download/). 
+See cloning and downloading instructions [here](https://ivoyager.dev/download/).
+
+We're ready to release v0.0.9-alpha! Just waiting for Godot 3.3 official release and final tests using that. But meanwhile, the Planetarium is getting lots of new data display and wiki links!
 
 ## Project Changes
 The first two will break external projects using the ivoyager submodule! Make changes as needed.
