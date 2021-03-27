@@ -45,6 +45,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Renamed Global signal "gui_refresh_requested" -> "update_gui_needed".
 * Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`. (Note: subclasses can override, unlike Godot virtual functions.)
 * Changes in TableReader "build_" function signatures; renamed "conv_" functions to "convert_".
+* Renamed ProjectBuilder dictionaries to be more consistent with file system directories.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
