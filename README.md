@@ -22,6 +22,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Expanded data display for all astronomical bodies with closeable sections and subsections. (Content can be customized by external project.)
 * Expanded wiki links for many data display labels and items, if enabled. (TODO: I want to abstract "wiki" to possibly include an in-game "Galactopedia" or similar. For now it opens browser to Wikipedia which is what we want for the Planetarium.)
 * Added new Composition object. The new Body.components dictionary can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
+* Added [data/solar_system/README.txt](https://github.com/ivoyager/ivoyager/blob/master/data/solar_system/README.txt) with details about our data table system. Comments about it were here and there, but have been moved mostly to the README now.
 
 ## Changes
 * External project can set root node of the simulation by setting ProjectBuilder property "universe".
