@@ -1,5 +1,5 @@
 # Current _master_ branch (v0.0.9-dev)
-Under development using [**Godot 3.3-rc6**](https://godotengine.org/article/release-candidate-godot-3-3-rc-6). Note: For asteroids to work in Godot 3.3-rc6 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9. Also, HTML5 build does not currently work when placed on host server due to [this Godot issue](https://github.com/godotengine/godot/issues/47357). This is fixed for next Godot release.
+Under development using [**Godot 3.3-rc7**](https://godotengine.org/article/release-candidate-godot-3-3-rc-6). Note: For asteroids to work in Godot 3.3-rc7 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
@@ -20,9 +20,11 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Many new "something_requested" signals in [Global](https://github.com/ivoyager/ivoyager/blob/master/singletons/global.gd). These can be used in lieu of direct calls to most functions in StateManager and SaveManager (and others).
 * Expanded API in [Body](https://github.com/ivoyager/ivoyager/blob/master/tree_nodes/body.gd) and [Orbit](https://github.com/ivoyager/ivoyager/blob/master/tree_refs/orbit.gd) classes.
 * Expanded data display for all astronomical bodies with closeable sections and subsections. (Content can be customized by external project.)
-* Expanded wiki links for many data display labels and items, if enabled. (TODO: I want to abstract "wiki" to possibly include an in-game "Galactopedia" or similar. For now it opens browser to Wikipedia which is what we want for the Planetarium.)
+* Expanded wiki links for many data display labels and items (must be enabled, as is the case for the Planetarium).
 * Added new Composition object. The new Body.components dictionary can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
-* Added [data/solar_system/README.txt](https://github.com/ivoyager/ivoyager/blob/master/data/solar_system/README.txt) with details about our data table system. Comments about it were here and there, but have been moved mostly to the README now.
+* Added [data/solar_system/TABLES_README.txt](https://github.com/ivoyager/ivoyager/blob/master/data/solar_system/TABLES_README.txt) with info and rules for our data table system.
+* Added capability for language localized Wikipedia links. All someone needs to do is add a table column "es.wikipedia", "de.wikipedia", etc., and add "es", "de", etc., to Global.wikipedia_locales.
+* Added capability for internal game wiki, a la Civilopedia. For this, add table column "wiki" and set Global.use_internal_wiki.
 
 ## Changes
 * External project can set root node of the simulation by setting ProjectBuilder property "universe".
@@ -33,6 +35,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Smoother progress bar progress during start and load. It's now linked to tasks completed by I/O thread.
 * Body object reorganized with most properties moved to new "characteristics" dictionary (for non-object properties) or "components" dictionary (for objects).
 * Improvements to SaveBuilder encoding of objects; SaveBuilder optimizations.
+* Moved remaining init code from Global to several new initializer classes. This is better organization and allows extension projects to modify.
 
 ## API-breaking changes
 * Class renamings:
