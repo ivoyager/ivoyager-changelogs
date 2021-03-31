@@ -5,7 +5,7 @@ Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](
 
 See cloning and downloading instructions [here](https://ivoyager.dev/download/).
 
-We're ready to release v0.0.9-alpha! Just waiting for Godot 3.3 official release and final tests using that. But meanwhile, the Planetarium is getting lots of new data display and wiki links!
+March 31 development version (7bec948) is on our website! [Try it!](https://www.ivoyager.dev/planetarium/) We'll release v0.0.9-alpha soon after Godot 3.3 release.
 
 ## Project Changes
 The first two will break external projects using the ivoyager submodule! Make changes as needed.
@@ -24,7 +24,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Added new Composition object. The new Body.components dictionary can hold any number of Composition instances representing anything. (I, Voyager uses for atmosphere chemical composition for display.)
 * Added [data/solar_system/TABLES_README.txt](https://github.com/ivoyager/ivoyager/blob/master/data/solar_system/TABLES_README.txt) with info and rules for our data table system.
 * Added capability for language localized Wikipedia links. All someone needs to do is add a table column "es.wikipedia", "de.wikipedia", etc., and add "es", "de", etc., to Global.wikipedia_locales.
-* Added capability for internal game wiki, a la Civilopedia. For this, add table column "wiki" and set Global.use_internal_wiki.
+* Added capability for an internal game wiki (a la Civilopedia). For this, add table column "wiki" and set Global.use_internal_wiki.
 
 ## Changes
 * External project can set root node of the simulation by setting ProjectBuilder property "universe".
