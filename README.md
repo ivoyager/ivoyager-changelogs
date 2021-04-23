@@ -51,6 +51,7 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Added leading underscore to ivoyager "virtual" functions: `_extension_init()` and `_project_init()`. (Note: subclasses can override, unlike Godot virtual functions.)
 * Changes in TableReader "build_" function signatures; renamed "conv_" functions to "convert_".
 * Renamed ProjectBuilder dictionaries to be more consistent with file system directories.
+* Removed Global arrays "camera_info" and "mouse_target". Info from these are contained in new VisualsHelper class.
 
 ## Bug fixes
 * Fixes to mouse_filter in various GUIs (was preventing selection of Iapetus).
@@ -61,3 +62,4 @@ The first two will break external projects using the ivoyager submodule! Make ch
 * Fixed lat/long display bugs.
 * Fixed various problems related to retrograde orbit or rotation.
 * Fixed some precision (significant digits) errors in data display.
+* Fixed bug causing moons to flicker or disappear at high game speeds.
