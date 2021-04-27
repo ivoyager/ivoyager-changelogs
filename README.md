@@ -1,5 +1,5 @@
 # Current _master_ branch (v0.0.9-dev)
-Under development using [**Godot 3.3-rc7**](https://godotengine.org/article/release-candidate-godot-3-3-rc-7). Note: For asteroids to work in Godot 3.3-rc7 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9.
+Under development using Godot 3.3 (just released!). Note: For asteroids to work in Godot 3.3 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9.
 
 Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
