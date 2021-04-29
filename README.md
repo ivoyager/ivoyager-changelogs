@@ -1,4 +1,4 @@
-# v0.0.9-alpha
+# v0.0.9
 
 Developed using Godot 3.3.
 
