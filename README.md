@@ -1,14 +1,10 @@
-# Current _master_ branch (v0.0.9-dev)
+# v0.0.9-alpha
 
-APRIL 29, 9:30 EST - UPDATING TO v0.0.9 NOW! THERE MAY BE SOME LOOSE ENDS AND MISSING DOWNLOADS FOR THE NEXT HOUR OR TWO...
+Developed using Godot 3.3.
 
-Under development using Godot 3.3 (just released!). Note: For asteroids to work in Godot 3.3 exports, you will need to remove .gdignore from ivoyager_assets/asteroid_binaries/. This will be fixed in a new assets release for v0.0.9.
-
-Requires non-Git-tracked **ivoyager_assets-0.0.7**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases) (but see note above).
+Requires non-Git-tracked **ivoyager_assets-0.0.9**; find in [ivoyager releases](https://github.com/ivoyager/ivoyager/releases).
 
 See cloning and downloading instructions [here](https://ivoyager.dev/download/).
-
-March 31 development version (7bec948) is on our website! [Try it!](https://www.ivoyager.dev/planetarium/) We'll release v0.0.9-alpha soon after Godot 3.3 release.
 
 ## Project Changes
 The first two will break external projects using the ivoyager submodule! Make changes as needed.
